@@ -15,8 +15,8 @@ const Home: NextPage = () => {
       <Nav id="home" />
       <div className="fixed w-24 h-screen flex items-center left-auto right-5 text-white ">
         <ul className="w-full flex flex-col items-center space-y-4 after:block after:w-0.5 after:h-24 after:mx-auto after:my-4 after:bg-[#ff6ec7] before:block before:w-0.5 before:h-24 before:mx-auto before:my-4 before:bg-[#ff6ec7]">
-          <li className="transition-all duration-300 hover:-translate-y-1"><Link target="_blank" className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5" href={'https://github.com/CALLmeDOMIN'}><i className="github-circled text-2xl" /></Link></li>
-          <li className="transition-all duration-300 hover:-translate-y-1"><Link target="_blank" className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5" href={'https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/'}>in</Link></li>
+          <li className="transition-all duration-300 hover:-translate-y-1"><Link target="_blank" className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5" href={'https://github.com/CALLmeDOMIN'}><i  className="icon-github-circled text-3xl" /></Link></li>
+          <li className="transition-all duration-300 hover:-translate-y-1"><Link target="_blank" className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5" href={'https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/'}><i  className="icon-linkedin-squared text-3xl" /></Link></li>
           <li className="transition-all duration-300 hover:-translate-y-1"><Link target="_blank" className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5" href={''}>abc</Link></li>
         </ul>
       </div>
