@@ -73,7 +73,7 @@ export default function Nav({ id }: { id: string }) {
 			<div
 				className={`opacity-0 md:hidden backdrop-blur
 			md:backdrop-blur-none fixed z-[5] w-screen h-screen 
-			top-0 left-0 transition-all ease-in duration-500 ${open ? "opacity-100" : "opacity-0"
+			top-0 left-0 transition-all ease-in duration-500 ${open ? "opacity-100 block" : "hidden opacity-0"
 					}
 			`}
 			></div>

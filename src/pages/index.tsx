@@ -14,6 +14,7 @@ import {
   IconArrowNarrowRight,
   IconBrandGithub,
   IconBrandVercel,
+  IconBrandLinkedin,
 } from "@tabler/icons-react";
 
 const Home: NextPage = () => {
@@ -26,30 +27,31 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="bg-slate-900">
-        <Nav id="home" />
-        <div className="hidden fixed w-24 h-screen md:flex items-center left-auto right-5 text-white ">
-          <ul className="w-full flex flex-col items-center space-y-4 after:block after:w-0.5 after:h-24 after:mx-auto after:my-4 after:bg-[#ff6ec7] before:block before:w-0.5 before:h-24 before:mx-auto before:my-4 before:bg-[#ff6ec7]">
-            <li className="transition-all duration-300 hover:-translate-y-1">
-              <Link
-                target="_blank"
-                className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5"
-                href={"https://github.com/CALLmeDOMIN"}
-              >
-                <i className="icon-github-circled text-3xl" />
-              </Link>
-            </li>
-            <li className="transition-all duration-300 hover:-translate-y-1">
-              <Link
-                target="_blank"
-                className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5"
-                href={
-                  "https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/"
-                }
-              >
-                <i className="icon-linkedin-squared text-3xl" />
-              </Link>
-            </li>
-            {/* <li className="transition-all duration-300 hover:-translate-y-1">
+        <div className="font-Poppins">
+          <Nav id="home" />
+          <div className="hidden fixed w-24 h-screen md:flex items-center left-auto right-0 md:right-5 text-white ">
+            <ul className="w-full flex flex-col items-center space-y-4 after:block after:w-0.5 after:h-24 after:mx-auto after:my-4 after:bg-[#ff6ec7] before:block before:w-0.5 before:h-24 before:mx-auto before:my-4 before:bg-[#ff6ec7]">
+              <li className="transition-all duration-300 hover:-translate-y-1">
+                <Link
+                  target="_blank"
+                  className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5"
+                  href={"https://github.com/CALLmeDOMIN"}
+                >
+                  <i className="icon-github-circled text-3xl" />
+                </Link>
+              </li>
+              <li className="transition-all duration-300 hover:-translate-y-1">
+                <Link
+                  target="_blank"
+                  className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5"
+                  href={
+                    "https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/"
+                  }
+                >
+                  <i className="icon-linkedin-squared text-3xl" />
+                </Link>
+              </li>
+              {/* <li className="transition-all duration-300 hover:-translate-y-1">
               <Link
                 target="_blank"
                 className="w-6 h-6 p-1 hover:text-pink-400 hover:mb-5"
@@ -58,9 +60,8 @@ const Home: NextPage = () => {
                 abc
               </Link>
             </li> */}
-          </ul>
-        </div>
-        <div className="font-Poppins">
+            </ul>
+          </div>
           <main className="px-6 md:px-12 lg:px-24 xl:px-36 py-0 my-0 mx-auto max-w-[1600px]">
             <section className="flex flex-col justify-center min-h-screen max-w-5xl mx-auto my-0">
               <h2 className="text-3xl text-gray-300 font-extralight">
@@ -84,7 +85,7 @@ const Home: NextPage = () => {
             </section>
             <section
               id="about"
-              className="max-w-5xl mx-auto my-0 md:pr-10 py-28"
+              className="min-h-[600px] max-w-5xl mx-auto my-0 md:pr-10 py-28"
             >
               <h2 className="text-5xl font-bold mb-4 text-gray-300">
                 About me
@@ -132,7 +133,7 @@ const Home: NextPage = () => {
             </section>
             <section
               id="portfolio"
-              className="min-h-screen my-0 mx-auto max-w-[1600px]"
+              className="min-h-screen my-0 mx-auto max-w-[1600px] py-28"
             >
               <div>
                 <h2 className="text-5xl font-bold text-gray-300">Projects</h2>
@@ -160,9 +161,26 @@ const Home: NextPage = () => {
                 <Link className="m-4 text-pink-400" href={''}>More</Link>
               </div>
             </section>
+            <section id="contact" className="flex flex-col space-y-4 min-h-[800px] py-28 mx-auto my-0 max-w-5xl  md:pr-10 text-gray-300 w-full">
+              <h2 className="text-5xl">Contact me</h2>
+              <p className="text-2xl border-l pl-2 border-pink-400 hover:border-white transition-all duration-500">You can write to me through <span className="text-pink-400">mail/discord</span>. I will always try to respond.</p>
+              <div className="flex justify-center space-x-4">
+                <Link href={'mailto:dominiksieron13@gmail.com'} className="p-4 hover:bg-pink-400/40 rounded-md text-pink-400 border border-pink-400 transition-all duration-500">
+                  Mail me!</Link>
+                <Link href={'https://discord.com/users/320254777160368139'} target="_blank" className="p-4 hover:bg-pink-400/40 rounded-md text-pink-400 border border-pink-400 transition-all duration-500">
+                  Discord</Link>
+              </div>
+            </section>
+            <footer className="text-gray-300 flex flex-col space-y-2 items-center justify-center min-h-[100px] border-t border-pink-400">
+              <div className="md:hidden flex space-x-4">
+                <Link className="hover:text-pink-400 transition-all duration-500 hover:-translate-y-1" href={'https://github.com/CALLmeDOMIN'}> <IconBrandGithub /> </Link>
+                <Link className="hover:text-pink-400 transition-all duration-500 hover:-translate-y-1" href={'https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b'}> <IconBrandLinkedin /> </Link>
+              </div>
+              <h1 className="text-lg">Designed and developed by <span className="text-pink-400">Dominik Sieroń</span></h1>
+            </footer>
           </main>
         </div>
-      </div>
+      </div >
     </>
   );
 };
