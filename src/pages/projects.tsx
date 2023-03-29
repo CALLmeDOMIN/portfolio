@@ -12,8 +12,14 @@ export default function Projects() {
 			<section
 				ref={ref}
 				id="portfolio"
-				className={`my-0 mx-auto max-w-[1600px] py-48 opacity-0 transition-all translate-x-full duration-[1250ms] ${inView ? 'opacity-100 blur-none -translate-x-0' : 'opacity-0'}`}
+				className={`my-0 mx-auto max-w-[1600px] py-48 opacity-0 transition-all translate-x-full duration-[1250ms] ${inView ? 'opacity-100 blur-none translate-x-1' : 'opacity-0'}`}
 			>
+				<style jsx global>{`
+          body{
+            overflow-x: hidden;
+          }
+        `}
+				</style>
 				<div>
 					<h2 className="text-5xl font-bold text-gray-300">Projects</h2>
 					<h2 className="flex items-center text-3xl font-semibold py-4 text-gray-300"> <IconArrowNarrowRight className="mx-2 text-pink-400" /> Frontend Mentor</h2>
