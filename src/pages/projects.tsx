@@ -12,39 +12,31 @@ export default function Projects() {
 			<section
 				ref={ref}
 				id="portfolio"
-				className={`my-0 mx-auto max-w-[1600px] py-48 opacity-0 transition-all translate-x-full duration-[1250ms] ${inView ? 'opacity-100 blur-none translate-x-1' : 'opacity-0'}`}
+				className={`my-0 mx-auto py-48 opacity-0 -translate-x-full transition-all duration-[1250ms] odd:delay-300 even:delay-700 ${inView ? 'opacity-100 translate-x-0 blur-none' : ''}`}
 			>
-				<style jsx global>{`
-          body{
-            overflow-x: hidden;
-          }
-        `}
-				</style>
-				<div>
-					<h2 className="text-5xl font-bold text-gray-300">Projects</h2>
-					<h2 className="flex items-center text-3xl font-semibold py-4 text-gray-300"> <IconArrowNarrowRight className="mx-2 text-pink-400" /> Frontend Mentor</h2>
-					<div className="pr-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-						<div className="text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/summarycomponent.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40">
-							<Link href={'https://github.com/CALLmeDOMIN/summary-component'} target="_blank"><IconBrandGithub /></Link>
-							<Link href={'https://summarycomponent-dominiksieron.vercel.app'} target="_blank"><IconBrandVercel /></Link>
-							<IconBrandHtml5 className="ml-auto" />
-							<IconBrandTailwind />
-						</div>
-						<div className=" text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/previewcard.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40">
-							<Link href={'https://github.com/CALLmeDOMIN/preview-card'} target="_blank"><IconBrandGithub /></Link>
-							<Link href={'https://previewcard-dominiksieron.vercel.app'} target="_blank"><IconBrandVercel /></Link>
-							<IconBrandReact className="ml-auto" />
-							<IconBrandTailwind />
-						</div>
-						<div className=" text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/qrcode.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40">
-							<Link href={'https://github.com/CALLmeDOMIN/qrcode'} target="_blank"><IconBrandGithub /></Link>
-							<Link href={'https://qrcode-dominiksieron.vercel.app/'} target="_blank"><IconBrandVercel /></Link>
-							<IconBrandHtml5 className="ml-auto" />
-							<IconBrandTailwind />
-						</div>
+				<h2 className="text-5xl font-bold text-gray-300">Projects</h2>
+				<h2 className="flex items-center text-3xl font-semibold py-4 text-gray-300"> <IconArrowNarrowRight className="mx-2 text-pink-400" /> Frontend Mentor</h2>
+				<div className="pr-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+					<div className={`text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/summarycomponent.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40 delay-300`}>
+						<Link href={'https://github.com/CALLmeDOMIN/summary-component'} target="_blank"><IconBrandGithub /></Link>
+						<Link href={'https://summarycomponent-dominiksieron.vercel.app'} target="_blank"><IconBrandVercel /></Link>
+						<IconBrandHtml5 className="ml-auto" />
+						<IconBrandTailwind />
 					</div>
-					<Link className="m-4 text-pink-400" href={''}>More</Link>
+					<div className=" text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/previewcard.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40 delay-1000">
+						<Link href={'https://github.com/CALLmeDOMIN/preview-card'} target="_blank"><IconBrandGithub /></Link>
+						<Link href={'https://previewcard-dominiksieron.vercel.app'} target="_blank"><IconBrandVercel /></Link>
+						<IconBrandReact className="ml-auto" />
+						<IconBrandTailwind />
+					</div>
+					<div className=" text-pink-400 flex items-end p-1 aspect-video rounded-xl bg-[url('/qrcode.png')] bg-blend-color-burn bg-center bg-cover bg-no-repeat shadow-md shadow-white/40">
+						<Link href={'https://github.com/CALLmeDOMIN/qrcode'} target="_blank"><IconBrandGithub /></Link>
+						<Link href={'https://qrcode-dominiksieron.vercel.app/'} target="_blank"><IconBrandVercel /></Link>
+						<IconBrandHtml5 className="ml-auto" />
+						<IconBrandTailwind />
+					</div>
 				</div>
+				<Link className="m-4 text-pink-400" href={''}>More</Link>
 			</section>
 		</>
 	)
