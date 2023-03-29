@@ -9,7 +9,7 @@ export default function Contact() {
 
 	return (
 		<>
-			<section ref={ref} id="contact" className={`flex flex-col space-y-4 min-h-[800px] py-28 mx-auto my-0 max-w-5xl  md:pr-10 text-gray-300 w-full transition-all translate-x-full duration-[1250ms] opacity-0 ${inView ? 'opacity-100 blur-none translate-x-1' : 'opacity-0'}`}>
+			<section ref={ref} id="contact" className={`flex flex-col space-y-4 min-h-[800px] py-28 mx-auto my-0 max-w-5xl  md:pr-10 text-gray-300 w-full opacity-0 -translate-x-full transition-all duration-[1250ms] odd:delay-300 even:delay-700 ${inView ? 'opacity-100 translate-x-0 blur-none' : ''}`}>
 
 				<style jsx global>{`
 					body{
