@@ -2,18 +2,32 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function Nav({ id }: { id: string }) {
+export default function Nav() {
 	const [open, setOpen] = useState(false);
+	const [scroll, setScroll] = useState(false);
+
+	// let prevScrollpos = window.pageYOffset;
+	// window.onscroll = () => {
+	// 	let currentScrollPos = window.pageYOffset;
+	// 	if (prevScrollpos > currentScrollPos) {
+	// 		setScroll(false);
+	// 	} else {
+	// 		setScroll(true);
+	// 	}
+	// 	prevScrollpos = currentScrollPos;
+	// };
 
 	return (
 		<nav
-			id={id}
-			className="w-screen flex fixed top-0  items-center justify-between gap-8 p-8 md:px-10 shadow-xl md:opacity-90 bg-slate-900"
+			className={`w-screen flex fixed top-0 transition-all ease-in-out duration-500 ${scroll ? '-top-full' : 'top-0'} items-center justify-between gap-8 p-8 md:px-10 shadow-xl md:opacity-90 bg-slate-900 z-[999]`}
 		>
 			<style jsx global>{`
         body {
           overflow-y: ${open ? "hidden" : "auto"};
         }
+		html{
+			scroll-behavior: smooth !important;
+		}
       `}</style>
 
 			<Link className="opacity-100" href={"#home"}>
@@ -48,7 +62,7 @@ export default function Nav({ id }: { id: string }) {
 						className="flex items-strech justify-center p-1 hover:text-pink-400 transition-all duration-500"
 						href={"#portfolio"}
 					>
-						Portfolio
+						Projects
 					</Link>
 				</li>
 				<li>
