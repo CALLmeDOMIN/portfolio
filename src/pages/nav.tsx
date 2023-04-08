@@ -6,17 +6,6 @@ export default function Nav() {
 	const [open, setOpen] = useState(false);
 	const [scroll, setScroll] = useState(false);
 
-	// let prevScrollpos = window.pageYOffset;
-	// window.onscroll = () => {
-	// 	let currentScrollPos = window.pageYOffset;
-	// 	if (prevScrollpos > currentScrollPos) {
-	// 		setScroll(false);
-	// 	} else {
-	// 		setScroll(true);
-	// 	}
-	// 	prevScrollpos = currentScrollPos;
-	// };
-
 	return (
 		<nav
 			className={`w-screen flex fixed top-0 transition-all ease-in-out duration-500 ${scroll ? '-top-full' : 'top-0'} items-center justify-between gap-8 p-8 md:px-10 shadow-xl md:opacity-90 bg-slate-900 z-[999]`}
@@ -78,7 +67,8 @@ export default function Nav() {
 					<Link
 						onClick={() => setOpen(false)}
 						className="flex items-center justify-center p-1 hover:text-pink-400 transition-all duration-500"
-						href={"#resume"}
+						href={"/CV_1-2.pdf"}
+						target="_blank"
 					>
 						Resume
 					</Link>
