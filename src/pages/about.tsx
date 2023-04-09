@@ -7,6 +7,9 @@ import {
 	IconBrandTailwind,
 	IconBrandNextjs,
 	IconBrandSass,
+	IconBrandPython,
+	IconBrandCpp,
+	IconBrandGit
 } from "@tabler/icons-react";
 import { useInView } from "react-intersection-observer";
 
@@ -67,6 +70,9 @@ export default function About() {
 						<IconBrandTypescript />
 						<IconBrandReact />
 						<IconBrandNextjs />
+						<IconBrandPython />
+						<IconBrandCpp />
+						<IconBrandGit />
 					</div>
 				</div>
 			</section>
