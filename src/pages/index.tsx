@@ -10,6 +10,7 @@ import About from "./about";
 import Main from "./main";
 import Projects from "./projects";
 import Contact from "./contact";
+import Certificates from "./certificates";
 
 const Home: NextPage = () => {
 
@@ -26,7 +27,7 @@ const Home: NextPage = () => {
           }
         `}</style>
       <div className="bg-slate-900">
-        <div className="font-Poppins">
+        <div className="font-Poppins scrollbar">
           <Nav />
           <div className="hidden fixed w-24 h-screen md:flex items-center left-auto right-0 md:right-5 text-white ">
             <ul className="w-full flex flex-col items-center space-y-4 after:block after:w-0.5 after:h-24 after:mx-auto after:my-4 after:bg-[#ff6ec7] before:block before:w-0.5 before:h-24 before:mx-auto before:my-4 before:bg-[#ff6ec7]">
@@ -65,6 +66,7 @@ const Home: NextPage = () => {
             <Main />
             <About />
             <Projects />
+            <Certificates />
             <Contact />
             <footer className="text-gray-300 flex flex-col space-y-2 items-center justify-center min-h-[100px] border-t border-pink-400">
               <div className="md:hidden flex space-x-4">

@@ -30,7 +30,7 @@ export default function Nav() {
 			</div>
 			<ul
 				className={`pt-12 md:p-0 py-10 mt-0 text-gray-300
-			 font-Poppins font-bold list-none flex flex-col md:flex-row md:static z-10
+			 font-Poppins font-bold list-none flex flex-col items-center justify-center md:flex-row md:static z-10
 			 md:z-auto fixed shadow-2xl md:shadow-none w-3/4 h-screen md:w-auto
 			 md:h-auto top-0 -right-full gap-10 md:gap-4 bg-inherit md:bg-transparent
 			md:opacity-100 transition-all ease-in duration-500 ${open ? " right-0" : " -right-full"
@@ -58,6 +58,15 @@ export default function Nav() {
 					<Link
 						onClick={() => setOpen(false)}
 						className="flex items-strech justify-center p-1 hover:text-pink-400 transition-all duration-500"
+						href={"#portfolio"}
+					>
+						Certificates
+					</Link>
+				</li>
+				<li>
+					<Link
+						onClick={() => setOpen(false)}
+						className="flex items-strech justify-center p-1 hover:text-pink-400 transition-all duration-500"
 						href={"#contact"}
 					>
 						Contact
@@ -66,11 +75,15 @@ export default function Nav() {
 				<li>
 					<Link
 						onClick={() => setOpen(false)}
-						className="flex items-center justify-center p-1 hover:text-pink-400 transition-all duration-500"
-						href={"/CV_1-2.pdf"}
+						className="flex items-center justify-center p-1 text-pink-400 transition-all duration-500 font-medium"
+						href={"/CV_1-3.pdf"}
 						target="_blank"
 					>
-						Resume
+						<button
+						className="border p-2 rounded-md border-pink-400 transition-all duration-300 hover:bg-pink-400/10"
+						>
+							Resume
+						</button>
 					</Link>
 				</li>
 			</ul>
