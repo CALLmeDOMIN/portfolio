@@ -76,7 +76,7 @@ export default function Nav() {
 					<Link
 						onClick={() => setOpen(false)}
 						className="flex items-center justify-center p-1 text-pink-400 transition-all duration-500 font-medium"
-						href={"/CV_1-3.pdf"}
+						href={"/CV_1-7.pdf"}
 						target="_blank"
 					>
 						<button

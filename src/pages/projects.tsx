@@ -30,6 +30,33 @@ export default function Projects() {
         </div>
         <h2 className="pl-4 flex items-center text-3xl font-semibold py-4 text-gray-300">
           {" "}
+          <IconArrowNarrowRight className="mx-2 text-pink-400" /> mytriproutes
+        </h2>
+        <div className="px-8">
+          <p className="text-gray-300">
+            As part of a small team of three, I was responsible for frontend
+            development and design in the mytriproutes project. I utilized
+            various tools and technologies, including React, Typescript, and
+            SCSS, and later migrated the project to Tailwindcss. Our team had
+            specific business and technical goals in mind throughout the
+            project, with a focus on providing users with an intuitive interface
+            and ensuring high website performance. We successfully created an
+            intuitive user interface, and the website functions quickly and
+            smoothly. Overall, MyTripRoutes benefits users by making it easier
+            for them to plan and share their trips, and store their photos and
+            routes in a user-friendly way. A preview of the project is available
+            at the link below (website may be during maintenance sometimes).
+          </p>
+          <Link
+            target="_blank"
+            className="text-pink-400"
+            href={"https://mytriproutes.com"}
+          >
+            Look up
+          </Link>
+        </div>
+        <h2 className="pl-4 flex items-center text-3xl font-semibold py-4 text-gray-300">
+          {" "}
           <IconArrowNarrowRight className="mx-2 text-pink-400" /> Frontend
           Mentor
         </h2>

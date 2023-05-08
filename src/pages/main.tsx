@@ -28,7 +28,7 @@ export default function Main() {
 					.
 				</p>
 				<Link
-					href={"/CV_1-3.pdf"}
+					href={"/CV_1-7.pdf"}
 					target="_blank"
 				>
 					<button className="sm:w-1/3 min-w-min mt-8 py-4 px-8 bg-transparent text-xl font-semibold text-pink-400 border border-pink-400 rounded-xl transition-all duration-500 hover:bg-pink-400/20">
