@@ -11,6 +11,7 @@ import {
   IconBrandCpp,
   IconBrandGit,
   IconUser,
+  IconSql
 } from "@tabler/icons-react";
 import { useInView } from "react-intersection-observer";
 
@@ -74,6 +75,7 @@ export default function About() {
             <IconBrandTypescript />
             <IconBrandReact />
             <IconBrandNextjs />
+            <IconSql />
             <IconBrandPython />
             <IconBrandCpp />
             <IconBrandGit />
