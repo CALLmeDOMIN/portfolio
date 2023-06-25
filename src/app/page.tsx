@@ -40,6 +40,7 @@ export default function Home() {
                                 target="_blank"
                                 className="w-6 h-6 p-1 hover:text-accent hover:mb-5"
                                 href={"https://github.com/CALLmeDOMIN"}
+                                aria-label="Github profile link"
                             >
                                 <IconBrandGithub />
                             </Link>
@@ -51,6 +52,7 @@ export default function Home() {
                                 href={
                                     "https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/"
                                 }
+                                aria-label="Linkedin profile link"
                             >
                                 <IconBrandLinkedin />
                             </Link>
@@ -82,6 +84,7 @@ export default function Home() {
                             href={"/CV_1-3-1.pdf"}
                             target="_blank"
                             className="sm:w-1/3 text-center min-w-min mt-8 py-4 px-8 text-xl font-semibold text-background bg-primary-button shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button rounded-xl transition-all duration-300"
+                            aria-label="CV link"
                         >
                             <button>Check out my CV!</button>
                         </Link>
@@ -210,6 +213,7 @@ export default function Home() {
                                     href={
                                         "car-rental-dominiksieron.vercel.app/"
                                     }
+                                    aria-label="Car rental project preview and link"
                                 >
                                     <Image
                                         src={"/car-rental.png"}
@@ -228,7 +232,7 @@ export default function Home() {
                             </h2>
                             <div className="flex md:flex-row flex-col gap-2">
                                 <div className="md:w-1/2 flex flex-col gap-2 items-center md:items-start">
-                                    <div className="flex justify-center gap-2 text-orange-400">
+                                    <div className="flex w-full items-center justify-center gap-2 text-orange-400">
                                         <IconAlertTriangle aria-label="warning" />
                                         <h1>Work in progress</h1>
                                     </div>
@@ -257,8 +261,9 @@ export default function Home() {
                                     </p>
                                     <Link
                                         target="_blank"
-                                        className="text-background shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button bg-primary-button font-semibold flex items-center p-2 w-28 rounded-md"
+                                        className="text-background md:ml-4 shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button bg-primary-button font-semibold flex items-center p-2 w-28 rounded-md"
                                         href={"https://mytriproutes.com"}
+                                        aria-label="Mytriproutes link"
                                     >
                                         <button className="grow">
                                             Look Up
@@ -269,6 +274,7 @@ export default function Home() {
                                 <Link
                                     className="md:w-1/2 rounded-xl max-h-[300px] shadow-md shadow-text/30"
                                     href={"https://mytriproutes.com"}
+                                    aria-label="Mytriproutes preview and link"
                                 >
                                     <Image
                                         src={"/mytriproutes.png"}
@@ -339,6 +345,7 @@ export default function Home() {
                                 href={
                                     "https://www.freecodecamp.org/certification/CALLmeDOMIN/javascript-algorithms-and-data-structures"
                                 }
+                                aria-label="FreeCodeCamp JavaScript certificate link"
                             >
                                 <button className="grow">Look Up</button>
                                 <IconArrowUpRight />
@@ -361,6 +368,7 @@ export default function Home() {
                                 href={
                                     "https://www.linkedin.com/learning/certificates/d9ee88b0d34eaafa1c30d8a5b86aa07bfbf73956f5c1cfa8ac397fcc70f7f317?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BPXoqZb2MSw6qBkVaX6Qnrg%3D%3D"
                                 }
+                                aria-label="Linkedin SQL certificate link"
                             >
                                 <button className="grow">Look Up</button>
                                 <IconArrowUpRight />
@@ -394,6 +402,7 @@ export default function Home() {
                                     <IconMail />
                                 </Link>
                                 <Link
+                                    aria-label="discord"
                                     href={
                                         "https://discord.com/users/320254777160368139"
                                     }
@@ -408,12 +417,14 @@ export default function Home() {
                     <footer className="text-text flex flex-col space-y-2 items-center justify-center min-h-[100px] border-t border-accent">
                         <div className="md:hidden flex space-x-4">
                             <Link
+                                aria-label="github profile link"
                                 className="hover:text-accent transition-all duration-300 hover:-translate-y-1"
                                 href={"https://github.com/CALLmeDOMIN"}
                             >
                                 <IconBrandGithub />
                             </Link>
                             <Link
+                                aria-label="linkedin profile link"
                                 className="hover:text-accent transition-all duration-300 hover:-translate-y-1"
                                 href={
                                     "https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b"
