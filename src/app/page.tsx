@@ -1,6 +1,7 @@
 import FrontendMentor from "@/components/frontendmentor";
 import {
     IconAddressBook,
+    IconAlertTriangle,
     IconArrowNarrowRight,
     IconArrowUpRight,
     IconBrandCpp,
@@ -12,6 +13,7 @@ import {
     IconBrandJavascript,
     IconBrandLinkedin,
     IconBrandNextjs,
+    IconBrandPrisma,
     IconBrandPython,
     IconBrandReact,
     IconBrandSass,
@@ -156,45 +158,133 @@ export default function Home() {
                                 Projects
                             </h2>
                         </div>
-                        <h2 className="pl-2 flex items-center text-3xl font-semibold py-4 text-text">
-                            <IconArrowNarrowRight className="mx-2 text-accent" />
-                            mytriproutes
-                        </h2>
-                        <div className="px-4">
-                            <p className="text-text">
-                                As part of a small team of three, I was
-                                responsible for frontend development and design
-                                in the mytriproutes project. I utilized various
-                                tools and technologies, including React,
-                                Typescript, and SCSS, and later migrated the
-                                project to Tailwindcss. Our team had specific
-                                business and technical goals in mind throughout
-                                the project, with a focus on providing users
-                                with an intuitive interface and ensuring high
-                                website performance. We successfully created an
-                                intuitive user interface, and the website
-                                functions quickly and smoothly. Overall,
-                                MyTripRoutes benefits users by making it easier
-                                for them to plan and share their trips, and
-                                store their photos and routes in a user-friendly
-                                way. A preview of the project is available at
-                                the link below (website may be under maintenance
-                                sometimes).
-                            </p>
-                            <Link
-                                passHref
-                                target="_blank"
-                                className="text-accent"
-                                href={"https://mytriproutes.com"}
-                            >
-                                Look up
-                            </Link>
+
+                        <div>
+                            <h2 className="pl-2 flex items-center text-3xl font-semibold py-4 text-text">
+                                <IconArrowNarrowRight className="mx-2 text-accent" />
+                                Car rental
+                            </h2>
+                            <div className="flex md:flex-row flex-col gap-2">
+                                <div className="md:w-1/2 flex flex-col gap-2">
+                                    <div className="flex justify-center gap-2 text-orange-400">
+                                        <IconAlertTriangle aria-label="warning" />
+                                        <h1>Work in progress</h1>
+                                    </div>
+                                    <p className="px-4 grow">
+                                        Project is a car rental website. It
+                                        symulates a car rental company. The
+                                        intention is to learn web development,
+                                        new technologies and build a fully
+                                        functional site. It is a work in
+                                        progress and will be updated with new
+                                        features, since its purpose is to learn
+                                        newest things in practice.
+                                    </p>
+                                    <div className="flex gap-2 px-4 pr-6 my-4">
+                                        <IconBrandNextjs aria-label="Nextjs" />
+                                        <IconBrandReact aria-label="React" />
+                                        <IconBrandTypescript aria-label="TypeScript" />
+                                        <IconBrandTailwind aria-label="Tailwindcss" />
+                                        <IconBrandPrisma aria-label="Prisma" />
+                                        <div className="grow" />
+                                        <Link
+                                            aria-label="Github repository"
+                                            href={
+                                                "https://github.com/CALLmeDOMIN/car-rental"
+                                            }
+                                        >
+                                            <IconBrandGithub />
+                                        </Link>
+                                        <Link
+                                            aria-label="Vercel deployment"
+                                            href={
+                                                "https://car-rental-dominiksieron.vercel.app/"
+                                            }
+                                        >
+                                            <IconBrandVercel />
+                                        </Link>
+                                    </div>
+                                </div>
+                                <Link
+                                    className="md:w-1/2 rounded-xl shadow-md shadow-text/30"
+                                    href={
+                                        "car-rental-dominiksieron.vercel.app/"
+                                    }
+                                >
+                                    <Image
+                                        src={"/car-rental.png"}
+                                        alt="car rental project preview"
+                                        width={1920}
+                                        height={1080}
+                                        className="rounded-xl"
+                                    />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="my-8 md:my-16">
+                            <h2 className="pl-2 flex items-center text-3xl font-semibold py-4 text-text">
+                                <IconArrowNarrowRight className="mx-2 text-accent" />
+                                mytriproutes
+                            </h2>
+                            <div className="flex md:flex-row flex-col gap-2">
+                                <div className="md:w-1/2 flex flex-col gap-2 items-center md:items-start">
+                                    <div className="flex justify-center gap-2 text-orange-400">
+                                        <IconAlertTriangle aria-label="warning" />
+                                        <h1>Work in progress</h1>
+                                    </div>
+                                    <p className="px-4 grow">
+                                        As part of a small team of three, I was
+                                        responsible for frontend development and
+                                        design in the mytriproutes project. I
+                                        utilized various tools and technologies,
+                                        including React, Typescript, and SCSS,
+                                        and later migrated the project to
+                                        Tailwindcss. Our team had specific
+                                        business and technical goals in mind
+                                        throughout the project, with a focus on
+                                        providing users with an intuitive
+                                        interface and ensuring high website
+                                        performance. We successfully created an
+                                        intuitive user interface, and the
+                                        website functions quickly and smoothly.
+                                        Overall, MyTripRoutes benefits users by
+                                        making it easier for them to plan and
+                                        share their trips, and store their
+                                        photos and routes in a user-friendly
+                                        way. A preview of the project is
+                                        available at the link below (website may
+                                        be under maintenance sometimes).
+                                    </p>
+                                    <Link
+                                        target="_blank"
+                                        className="text-background shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button bg-primary-button font-semibold flex items-center p-2 w-28 rounded-md"
+                                        href={"https://mytriproutes.com"}
+                                    >
+                                        <button className="grow">
+                                            Look Up
+                                        </button>
+                                        <IconArrowUpRight />
+                                    </Link>
+                                </div>
+                                <Link
+                                    className="md:w-1/2 rounded-xl max-h-[300px] shadow-md shadow-text/30"
+                                    href={"https://mytriproutes.com"}
+                                >
+                                    <Image
+                                        src={"/mytriproutes.png"}
+                                        alt="car rental project preview"
+                                        width={1920}
+                                        height={1080}
+                                        className="rounded-xl"
+                                    />
+                                </Link>
+                            </div>
                         </div>
                         <h2 className="pl-2 flex items-center text-3xl font-semibold py-4 text-text">
                             <IconArrowNarrowRight className="mx-2 text-accent" />
                             Frontend Mentor
                         </h2>
-                        <div className="px-4 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
+                        <div className="px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
                             <FrontendMentor
                                 image="/tipcalc.jpg"
                                 alt="tip calculator"
@@ -297,7 +387,8 @@ export default function Home() {
                             </p>
                             <div className="flex justify-center gap-4">
                                 <Link
-                                    href={"mailto:dominiksieron13@gmail.com"}
+                                    aria-label="mail"
+                                    href="mailto:dominiksieron13@gmail.com"
                                     className="text-background bg-primary-button shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button transition-all ease-in-out flex justify-center p-2 px-4 rounded-md ml-4"
                                 >
                                     <IconMail />
