@@ -3,8 +3,8 @@ import { type Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Dominik Sieroń",
-    description: "Portfolio. Dominik Sieroń",
+    title: "Portfolio Dominik Sieroń",
+    description: "Portfolio Dominik Sieroń - Web Developer",
 };
 
 export default function RootLayout({
@@ -13,8 +13,8 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en">
-            <body className="overflow-x-hidden">
+        <html lang="en" className="!scroll-smooth">
+            <body className="overflow-x-hidden bg-background text-text">
                 <Nav />
                 {children}
             </body>
