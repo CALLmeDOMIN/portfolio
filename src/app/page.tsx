@@ -389,7 +389,7 @@ export default function Home() {
                                 target="about:blank"
                                 className="text-background bg-primary-button shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button transition-all ease-in-out font-semibold flex items-center p-2 w-28 rounded-md"
                                 href={
-                                    "https://www.linkedin.com/learning/certificates/d9ee88b0d34eaafa1c30d8a5b86aa07bfbf73956f5c1cfa8ac397fcc70f7f317?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BPXoqZb2MSw6qBkVaX6Qnrg%3D%3D"
+                                    "https://www.linkedin.com/learning/certificates/6e0410f3fb9da1a3fe38c9ad0ca2a1affcd0af36d046d05da07e71597cebd329"
                                 }
                                 aria-label="Linkedin SQL certificate link"
                             >
