@@ -37,7 +37,7 @@ export default function Home() {
                     <ul className="w-full flex flex-col items-center after:block after:w-0.5 after:h-24 after:mx-auto after:my-1 after:bg-accent before:block before:w-0.5 before:h-24 before:mx-auto before:my-1 before:bg-accent">
                         <li className="transition-all duration-300 hover:-translate-y-1 ease-in-out">
                             <Link
-                                target="_blank"
+                                target="about:blank"
                                 className="w-6 h-6 p-1 hover:text-accent hover:mb-5"
                                 href={"https://github.com/CALLmeDOMIN"}
                                 aria-label="Github profile link"
@@ -47,7 +47,7 @@ export default function Home() {
                         </li>
                         <li className="transition-all duration-300 hover:-translate-y-1 ease-in-out">
                             <Link
-                                target="_blank"
+                                target="about:blank"
                                 className="w-6 h-6 p-1 hover:text-accent hover:mb-5"
                                 href={
                                     "https://www.linkedin.com/in/dominik-siero%C5%84-42405a26b/"
@@ -81,8 +81,8 @@ export default function Home() {
                             .
                         </p>
                         <Link
-                            href={"/CV_1-3-1.pdf"}
-                            target="_blank"
+                            href={"/DominikSieronCV.pdf"}
+                            target="about:blank"
                             className="sm:w-1/3 text-center min-w-min mt-8 py-4 px-8 text-xl font-semibold text-background bg-primary-button shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button rounded-xl transition-all duration-300"
                             aria-label="CV link"
                         >
@@ -211,7 +211,7 @@ export default function Home() {
                                 <Link
                                     className="md:w-1/2 rounded-xl shadow-md shadow-text/30"
                                     href={
-                                        "car-rental-dominiksieron.vercel.app/"
+                                        "https://car-rental-dominiksieron.vercel.app/"
                                     }
                                     aria-label="Car rental project preview and link"
                                 >
@@ -260,7 +260,7 @@ export default function Home() {
                                         be under maintenance sometimes).
                                     </p>
                                     <Link
-                                        target="_blank"
+                                        target="about:blank"
                                         className="text-background md:ml-4 shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button bg-primary-button font-semibold flex items-center p-2 w-28 rounded-md"
                                         href={"https://mytriproutes.com"}
                                         aria-label="Mytriproutes link"
@@ -340,7 +340,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <Link
-                                target="_blank"
+                                target="about:blank"
                                 className="text-background shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button bg-primary-button font-semibold flex items-center p-2 w-28 rounded-md"
                                 href={
                                     "https://www.freecodecamp.org/certification/CALLmeDOMIN/javascript-algorithms-and-data-structures"
@@ -363,8 +363,31 @@ export default function Home() {
                                 </p>
                             </div>
                             <Link
-                                target="_blank"
+                                target="about:blank"
                                 className="text-background bg-secondary-button shadow-sm shadow-secondary-button hover:shadow-md hover:shadow-secondary-button transition-all ease-in-out font-semibold flex items-center p-2 w-28 rounded-md"
+                                href={
+                                    "https://www.linkedin.com/learning/certificates/d9ee88b0d34eaafa1c30d8a5b86aa07bfbf73956f5c1cfa8ac397fcc70f7f317?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BPXoqZb2MSw6qBkVaX6Qnrg%3D%3D"
+                                }
+                                aria-label="Linkedin SQL certificate link"
+                            >
+                                <button className="grow">Look Up</button>
+                                <IconArrowUpRight />
+                            </Link>
+                        </div>
+
+                        <div className="md:w-5/6 mt-4 ">
+                            <div className="text-justify pl-2 border-l border-accent hover:border-white">
+                                <p className=" md:text-xl font-light transition-all duration-300 text-text mb-4">
+                                    TypeScript Essential Training by Linkedin
+                                </p>
+                                <p className=" md:text-md font-light transition-all duration-300 text-text mb-4 pl-4">
+                                    Developer Certification, representing
+                                    knowledge of Typescript language.
+                                </p>
+                            </div>
+                            <Link
+                                target="about:blank"
+                                className="text-background bg-primary-button shadow-sm shadow-primary-button hover:shadow-md hover:shadow-primary-button transition-all ease-in-out font-semibold flex items-center p-2 w-28 rounded-md"
                                 href={
                                     "https://www.linkedin.com/learning/certificates/d9ee88b0d34eaafa1c30d8a5b86aa07bfbf73956f5c1cfa8ac397fcc70f7f317?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BPXoqZb2MSw6qBkVaX6Qnrg%3D%3D"
                                 }
@@ -406,7 +429,7 @@ export default function Home() {
                                     href={
                                         "https://discord.com/users/320254777160368139"
                                     }
-                                    target="_blank"
+                                    target="about:blank"
                                     className="text-background bg-secondary-button shadow-sm shadow-secondary-button hover:shadow-md hover:shadow-secondary-button transition-all ease-in-out flex justify-center p-2 px-4 rounded-md ml-4"
                                 >
                                     <IconBrandDiscord />

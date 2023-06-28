@@ -30,7 +30,7 @@ export default function Nav() {
             <ul
                 className={
                     "pt-12 md:p-0 py-10 mt-0 text-text font-bold list-none flex flex-col items-center justify-center md:flex-row md:static z-10 md:z-auto fixed shadow-2xl md:shadow-none w-3/4 h-screen md:w-auto md:h-auto top-0 -right-full gap-10 md:gap-4 bg-inherit md:bg-transparent md:opacity-100 transition-all ease-in duration-500" +
-                    (open ? " right-0" : "-right-full")
+                    (open ? " right-0" : " -right-full")
                 }
             >
                 <li>
@@ -74,7 +74,7 @@ export default function Nav() {
                         passHref
                         onClick={() => setOpen(false)}
                         className="flex items-center font-semibold justify-center p-3 rounded-md px-6 text-background bg-primary-button transition-all duration-300 shadow-sm shadow-primary-button"
-                        href={"/CV_1-3-1.pdf"}
+                        href={"/DominikSieronCV.pdf"}
                         target="_blank"
                     >
                         <button>Resume</button>
