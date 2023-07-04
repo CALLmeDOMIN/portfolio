@@ -289,6 +289,13 @@ export default function Home() {
                         <h2 className="pl-2 flex items-center text-3xl font-semibold py-4 text-text">
                             <IconArrowNarrowRight className="mx-2 text-accent" />
                             Frontend Mentor
+                            <Link
+                                href={"https://www.frontendmentor.io/"}
+                                target="about:blank"
+                                className="pl-4 text-accent"
+                            >
+                                <IconArrowUpRight />
+                            </Link>
                         </h2>
                         <div className="px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
                             <FrontendMentor

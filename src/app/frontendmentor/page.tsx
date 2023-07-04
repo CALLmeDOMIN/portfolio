@@ -1,6 +1,7 @@
 import { FunctionComponent } from "react";
 import FrontendMentor from "@/components/frontendmentor";
 import Link from "next/link";
+import { IconArrowUpRight } from "@tabler/icons-react";
 
 interface MentorProps {}
 
@@ -8,11 +9,21 @@ const Mentor: FunctionComponent<MentorProps> = () => {
     return (
         <>
             <div className="flex items-center justify-center min-h-screen flex-col">
-                <div className="flex items-center justify-center">
-                    <Link href={"/"} className="my-12">
+                <h2 className="grid grid-cols-4 text-3xl font-semibold py-4 text-text">
+                    <Link href={"/"} className="my-12 pr-10">
                         <button>&larr; Back</button>
                     </Link>
-                </div>
+                    <div className="col-span-3 flex items-center">
+                        <h1>Frontend Mentor</h1>
+                        <Link
+                            href={"https://www.frontendmentor.io/"}
+                            target="about:blank"
+                            className="pl-2 text-accent"
+                        >
+                            <IconArrowUpRight />
+                        </Link>
+                    </div>
+                </h2>
                 <div className="">
                     <div className="max-w-7xl px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
                         <FrontendMentor
