@@ -24,7 +24,7 @@ function FrontendMentor({
     return (
         <div className="relative max-w-xs max-h-44">
             <Image
-                className="max-w-xs max-h-44 transform hover:scale-105 ease-in-out transition-all duration-300 aspect-video rounded-xl shadow-sm shadow-text"
+                className="max-w-xs max-h-44 transform hover:scale-105 ease-in-out transition-all duration-300 aspect-video rounded-xl"
                 src={image}
                 alt={alt}
                 width={320}
