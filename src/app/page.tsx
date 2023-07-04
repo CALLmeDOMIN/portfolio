@@ -292,6 +292,13 @@ export default function Home() {
                         </h2>
                         <div className="px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
                             <FrontendMentor
+                                image="/newsletter.jpg"
+                                alt="newsletter sign up"
+                                github="https://github.com/CALLmeDOMIN/newsletter-sign-up"
+                                vercel="https://newsletter-sign-up-delta.vercel.app/"
+                                whiteText
+                            />
+                            <FrontendMentor
                                 image="/tipcalc.jpg"
                                 alt="tip calculator"
                                 github="https://github.com/CALLmeDOMIN/tip-calculator"

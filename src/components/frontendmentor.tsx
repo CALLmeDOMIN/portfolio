@@ -13,16 +13,18 @@ function FrontendMentor({
     github,
     vercel,
     alt,
+    whiteText,
 }: {
     image: string;
     github: string;
     vercel: string;
     alt: string;
+    whiteText?: boolean;
 }) {
     return (
         <div className="relative max-w-xs max-h-44">
             <Image
-                className="text-accent max-w-xs max-h-44 transform hover:scale-105 ease-in-out transition-all duration-300 aspect-video rounded-xl shadow-sm shadow-text"
+                className="max-w-xs max-h-44 transform hover:scale-105 ease-in-out transition-all duration-300 aspect-video rounded-xl shadow-sm shadow-text"
                 src={image}
                 alt={alt}
                 width={320}
@@ -33,7 +35,10 @@ function FrontendMentor({
                 passHref
                 href={github}
                 target="_blank"
-                className="absolute bottom-1 left-2 text-accent"
+                className={
+                    "absolute bottom-1 left-2" +
+                    (whiteText ? " text-white" : " text-accent")
+                }
             >
                 <IconBrandGithub aria-label="github" />
             </Link>
@@ -41,16 +46,25 @@ function FrontendMentor({
                 passHref
                 href={vercel}
                 target="_blank"
-                className="absolute bottom-1 left-9 text-accent"
+                className={
+                    "absolute bottom-1 left-9" +
+                    (whiteText ? " text-white" : " text-accent")
+                }
             >
                 <IconBrandVercel aria-label="vercel" />
             </Link>
             <IconBrandReact
-                className="absolute top-1 right-2 text-accent"
+                className={
+                    "absolute top-1 right-2" +
+                    (whiteText ? " text-white" : " text-accent")
+                }
                 aria-label="react"
             />
             <IconBrandTailwind
-                className="absolute top-1 right-9 text-accent"
+                className={
+                    "absolute top-1 right-9" +
+                    (whiteText ? " text-white" : " text-accent")
+                }
                 aria-label="tailwindcss"
             />
         </div>
