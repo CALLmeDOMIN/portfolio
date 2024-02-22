@@ -1,15 +1,12 @@
-import { FunctionComponent } from "react";
-import FrontendMentor from "@/components/frontendmentor";
+import FrontendMentor from "@/components/Frontendmentor";
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
-interface MentorProps {}
-
-const Mentor: FunctionComponent<MentorProps> = () => {
+const Mentor = () => {
     return (
         <>
-            <div className="flex items-center justify-center min-h-screen flex-col">
-                <h2 className="grid grid-cols-4 text-3xl font-semibold py-4 text-text">
+            <div className="flex min-h-screen flex-col items-center justify-center">
+                <h2 className="grid grid-cols-4 py-4 text-3xl font-semibold text-text">
                     <Link href={"/"} className="my-12 pr-10">
                         <button>&larr; Back</button>
                     </Link>
@@ -25,7 +22,7 @@ const Mentor: FunctionComponent<MentorProps> = () => {
                     </div>
                 </h2>
                 <div className="">
-                    <div className="max-w-7xl px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4 transition-all duration-1000 odd:delay-300 even:delay-700">
+                    <div className="mb-4 grid max-w-7xl gap-4 px-4 transition-all duration-1000 odd:delay-300 even:delay-700 sm:grid-cols-2 lg:grid-cols-3">
                         <FrontendMentor
                             image="/advice.jpg"
                             alt="advice generator"
