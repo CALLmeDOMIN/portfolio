@@ -1,11 +1,8 @@
-import { FunctionComponent } from "react";
 import FrontendMentor from "@/components/Frontendmentor";
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
 
-interface MentorProps {}
-
-const Mentor: FunctionComponent<MentorProps> = () => {
+const Mentor = () => {
     return (
         <>
             <div className="flex min-h-screen flex-col items-center justify-center">
