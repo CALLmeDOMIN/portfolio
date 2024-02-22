@@ -1,42 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
-import { IconMenu2 } from "@tabler/icons-react";
+import { IconArrowUpRight, IconMenu2 } from "@tabler/icons-react";
 import { IconX } from "@tabler/icons-react";
 
 export default function Nav() {
     const [open, setOpen] = useState(false);
-    // const [scroll] = useState(false);
 
     return (
-        <nav className="w-screen flex fixed top-0 transition-all ease-in-out duration-500items-center justify-between gap-8 p-8 md:px-10 shadow-xl md:opacity-90 bg-background text-text z-10">
-            <Link className="opacity-100" href={"#home"}>
-                <Image
-                    src={"/logo.png"}
-                    alt="Logo"
-                    width={48}
-                    height={48}
-                    className="aspect-square w-auto cursor-pointer ease-in-out transition-all duration-300 hover:opacity-80"
-                ></Image>
+        <nav className="fixed top-0 z-10 flex w-screen items-center justify-between gap-8 bg-background p-8 text-text shadow-xl transition-all duration-500 ease-in-out md:px-10 md:opacity-90">
+            <Link className="text-xl font-bold" href={"#home"}>
+                <span className="align-top text-gray-400">src</span>
+                <span className="text-3xl text-accent">/</span>
+                Dominik
+                <span className="text-accent">.</span>
+                tsx
             </Link>
             <div
                 onClick={() => setOpen(!open)}
-                className="transition-all duration-500 md:hidden h-full z-20 aspect-square text-3xl text-primary-button cursor-pointer"
+                className="z-20 aspect-square h-full cursor-pointer text-3xl text-primary-button transition-all duration-500 md:hidden"
             >
                 {open ? <IconX /> : <IconMenu2 />}
             </div>
             <ul
                 className={
-                    "pt-12 md:p-0 py-10 mt-0 text-text font-bold list-none flex flex-col items-center justify-center md:flex-row md:static z-10 md:z-auto fixed shadow-2xl md:shadow-none w-3/4 h-screen md:w-auto md:h-auto top-0 -right-full gap-10 md:gap-4 bg-inherit md:bg-transparent md:opacity-100 transition-all ease-in duration-500" +
-                    (open ? " right-0" : " -right-full")
+                    "fixed top-0 z-10 mt-0 flex h-screen w-3/4 flex-col items-center justify-center gap-10 bg-inherit py-10 pt-12 font-bold shadow-2xl transition-all duration-500 ease-in md:static md:z-auto md:h-auto md:w-auto md:flex-row md:gap-4 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none " +
+                    (open ? "right-0" : "-right-full")
                 }
             >
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
-                        className="flex items-strech justify-center p-1 hover:text-accent hover:-translate-y-1 transition-all duration-300"
+                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
                         href={"#about"}
                     >
                         About me
@@ -45,7 +41,7 @@ export default function Nav() {
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
-                        className="flex items-strech justify-center p-1 hover:text-accent hover:-translate-y-1 transition-all duration-300"
+                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
                         href={"#projects"}
                     >
                         Projects
@@ -54,16 +50,7 @@ export default function Nav() {
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
-                        className="flex items-strech justify-center p-1 hover:text-accent hover:-translate-y-1 transition-all duration-300"
-                        href={"#certificates"}
-                    >
-                        Certificates
-                    </Link>
-                </li>
-                <li>
-                    <Link
-                        onClick={() => setOpen(false)}
-                        className="flex items-strech justify-center p-1 hover:text-accent hover:-translate-y-1 transition-all duration-300"
+                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
                         href={"#contact"}
                     >
                         Contact
@@ -73,19 +60,25 @@ export default function Nav() {
                     <Link
                         passHref
                         onClick={() => setOpen(false)}
-                        className="flex items-center font-semibold justify-center p-3 rounded-md px-6 text-background bg-primary-button transition-all duration-300 shadow-sm shadow-primary-button"
-                        href={"/DominikSieronCV.pdf"}
+                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+                        href={"/CV.pdf"}
                         target="_blank"
                     >
-                        <button>Resume</button>
+                        <button>
+                            Resume
+                            <IconArrowUpRight
+                                className="-mt-1 inline-block"
+                                size={16}
+                            />
+                        </button>
                     </Link>
                 </li>
             </ul>
             <div
                 onClick={() => setOpen(false)}
                 className={
-                    "md:hidden backdrop-blur md:backdrop-blur-none fixed z-[5] w-screen h-screen top-0 left-0 transition-all ease-in-out duration-500" +
-                    (open ? " opacity-100" : " opacity-0")
+                    "fixed top-0 left-0 z-[5] h-screen w-screen backdrop-blur transition-all duration-500 ease-in-out md:hidden md:backdrop-blur-none " +
+                    (open ? "opacity-100" : "opacity-0")
                 }
             ></div>
         </nav>
