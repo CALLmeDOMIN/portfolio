@@ -1,30 +1,20 @@
 import {
     IconAddressBook,
     IconAlertTriangle,
-    IconArrowNarrowRight,
     IconArrowUpRight,
-    IconBrandCpp,
-    IconBrandCss3,
     IconBrandDiscord,
     IconBrandDjango,
     IconBrandFirefox,
-    IconBrandGit,
     IconBrandGithub,
-    IconBrandHtml5,
-    IconBrandJavascript,
     IconBrandLinkedin,
     IconBrandNextjs,
     IconBrandPrisma,
-    IconBrandPython,
     IconBrandReact,
-    IconBrandSass,
     IconBrandTailwind,
     IconBrandTypescript,
     IconBrandVercel,
     IconCode,
     IconMail,
-    IconSql,
-    IconUser,
 } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -50,15 +40,15 @@ export default function Home() {
                         <br />
                         at{" "}
                         <span className="text-accent">
-                            AGH University of Science and Technology
+                            AGH University of Cracow
                         </span>
                         .
                     </p>
                     <div className="flex items-center gap-2 pl-2">
                         <div className="h-0.5 w-4 bg-accent"></div>
                         <Link
-                            passHref
-                            target="about:blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-accent"
                             href="https://github.com/CALLmeDOMIN"
                             aria-label="Github profile link"
@@ -67,8 +57,8 @@ export default function Home() {
                         </Link>
                         <div className="h-0.5 w-0.5 bg-accent"></div>
                         <Link
-                            passHref
-                            target="about:blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-accent"
                             href="https://www.linkedin.com/in/dominiksieron/"
                             aria-label="Linkedin profile link"
@@ -77,8 +67,8 @@ export default function Home() {
                         </Link>
                         <div className="h-0.5 w-0.5 bg-accent"></div>
                         <Link
-                            passHref
-                            target="about:blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-accent"
                             href={"/CV.pdf"}
                             aria-label="CV pdf"
@@ -110,9 +100,10 @@ export default function Home() {
                     </div>
                 </main>
                 <section
-                    id="projects"
+                    id="experience"
                     className="bg-accent text-background px-4"
-                >
+                ></section>
+                <section id="projects" className="px-4">
                     <div className="max-w-7xl mx-auto py-14 space-y-10">
                         <div className="flex justify-end ">
                             <h2 className="text-5xl font-bold">Projects</h2>
@@ -237,7 +228,8 @@ export default function Home() {
                                         </Link>
                                         <div className="h-0.5 w-0.5 bg-background"></div>
                                         <Link
-                                            target="about:blank"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             href={"https://mytriproutes.com"}
                                             aria-label="Mytriproutes link"
                                         >
@@ -264,7 +256,8 @@ export default function Home() {
                             Frontend Mentor
                             <Link
                                 href={"https://www.frontendmentor.io/"}
-                                target="about:blank"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="pl-4 text-background"
                             >
                                 <IconArrowUpRight />
@@ -339,7 +332,8 @@ export default function Home() {
                                 href={
                                     "https://discord.com/users/320254777160368139"
                                 }
-                                target="about:blank"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="ml-4 flex justify-center rounded-md bg-secondary-button p-2 px-4 text-background shadow-sm shadow-secondary-button transition-all ease-in-out hover:shadow-md hover:shadow-secondary-button"
                             >
                                 <IconBrandDiscord />
