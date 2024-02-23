@@ -1,16 +1,16 @@
-import Nav from "@/components/Nav";
-import { type Metadata } from "next";
-import "./globals.css";
+import { type Metadata } from "next"
+import "./globals.css"
+import Nav from "./components/Nav"
 
 export const metadata: Metadata = {
     title: "Portfolio Dominik Sieroń",
     description: "Portfolio Dominik Sieroń - Web Developer",
-};
+}
 
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode;
+    children: React.ReactNode
 }) {
     return (
         <html lang="en" className="!scroll-smooth">
@@ -19,5 +19,5 @@ export default function RootLayout({
                 {children}
             </body>
         </html>
-    );
+    )
 }
