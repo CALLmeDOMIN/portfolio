@@ -1,3 +1,5 @@
+"use client"
+
 import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -25,15 +27,6 @@ const Nav = () => {
                     (open ? "right-0" : "-right-full")
                 }
             >
-                <li>
-                    <Link
-                        onClick={() => setOpen(false)}
-                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
-                        href={"#about"}
-                    >
-                        About me
-                    </Link>
-                </li>
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
