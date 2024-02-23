@@ -3,10 +3,10 @@ import {
     IconBrandReact,
     IconBrandTailwind,
     IconBrandVercel,
-} from "@tabler/icons-react";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+} from "@tabler/icons-react"
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
 
 function FrontendMentor({
     image,
@@ -15,11 +15,11 @@ function FrontendMentor({
     alt,
     whiteText,
 }: {
-    image: string;
-    github: string;
-    vercel: string;
-    alt: string;
-    whiteText?: boolean;
+    image: string
+    github: string
+    vercel: string
+    alt: string
+    whiteText?: boolean
 }) {
     return (
         <div className="relative max-w-xs max-h-44">
@@ -68,7 +68,7 @@ function FrontendMentor({
                 aria-label="tailwindcss"
             />
         </div>
-    );
+    )
 }
 
-export default FrontendMentor;
+export default FrontendMentor

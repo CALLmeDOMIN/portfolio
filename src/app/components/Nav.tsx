@@ -1,13 +1,11 @@
-"use client";
+"use client"
 
-import Link from "next/link";
-import { useState } from "react";
-import { IconArrowUpRight, IconMenu2 } from "@tabler/icons-react";
-import { IconX } from "@tabler/icons-react";
+import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react"
+import Link from "next/link"
+import { useState } from "react"
 
-export default function Nav() {
-    const [open, setOpen] = useState(false);
-
+const Nav = () => {
+    const [open, setOpen] = useState(false)
     return (
         <nav className="fixed top-0 z-10 flex w-screen items-center justify-between gap-8 bg-background p-8 text-text shadow-xl transition-all duration-500 ease-in-out md:px-10 md:opacity-90">
             <Link className="text-xl font-bold" href={"#home"}>
@@ -29,15 +27,6 @@ export default function Nav() {
                     (open ? "right-0" : "-right-full")
                 }
             >
-                <li>
-                    <Link
-                        onClick={() => setOpen(false)}
-                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
-                        href={"#about"}
-                    >
-                        About me
-                    </Link>
-                </li>
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
@@ -82,5 +71,7 @@ export default function Nav() {
                 }
             ></div>
         </nav>
-    );
+    )
 }
+
+export default Nav
