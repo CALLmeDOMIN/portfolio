@@ -15,6 +15,7 @@ import {
     IconBrandVercel,
     IconCode,
     IconMail,
+    IconSubtask,
 } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -29,8 +30,8 @@ export default function Home() {
                     id="home"
                     className="mx-auto px-4 flex min-h-screen max-w-5xl flex-col justify-center"
                 >
-                    <h2 className="text-3xl font-extralight">Hi, my name is</h2>
-                    <h1 className="-ml-1 text-7xl font-semibold text-accent">
+                    <h1 className="text-3xl font-extralight">Hi, my name is</h1>
+                    <h1 className="-ml-1 text-7xl font-semibold text-primary">
                         Dominik Sieroń.
                     </h1>
                     <p className="mt-4 max-w-[25ch] pl-2 pb-2 text-xl md:max-w-[50ch]">
@@ -45,31 +46,31 @@ export default function Home() {
                         .
                     </p>
                     <div className="flex items-center gap-2 pl-2">
-                        <div className="h-0.5 w-4 bg-accent"></div>
+                        <div className="h-0.5 w-4 bg-secondary"></div>
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-accent"
+                            className="hover:text-primary
                             href="https://github.com/CALLmeDOMIN"
                             aria-label="Github profile link"
                         >
                             <IconBrandGithub size={24} />
                         </Link>
-                        <div className="h-0.5 w-0.5 bg-accent"></div>
+                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-accent"
+                            className="hover:text-primary"
                             href="https://www.linkedin.com/in/dominiksieron/"
                             aria-label="Linkedin profile link"
                         >
                             <IconBrandLinkedin size={24} />
                         </Link>
-                        <div className="h-0.5 w-0.5 bg-accent"></div>
+                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-accent"
+                            className="hover:text-primary"
                             href={"/CV.pdf"}
                             aria-label="CV pdf"
                         >
@@ -87,7 +88,7 @@ export default function Home() {
                             >
                                 <path
                                     stroke="none"
-                                    d="M0 0h24v24H0z"
+                                    d="M0 0h14v24H0z"
                                     fill="none"
                                 />
                                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
@@ -96,21 +97,124 @@ export default function Home() {
                                 <path d="M13 11l1.5 6l1.5 -6" />
                             </svg>
                         </Link>
-                        <div className="h-0.5 w-[40%] bg-accent"></div>
+                        <div className="h-0.5 w-[40%] bg-secondary"></div>
                     </div>
                 </main>
                 <section
                     id="experience"
-                    className="bg-accent text-background px-4"
-                ></section>
-                <section id="projects" className="px-4">
-                    <div className="max-w-7xl mx-auto py-14 space-y-10">
-                        <div className="flex justify-end ">
-                            <h2 className="text-5xl font-bold">Projects</h2>
-                            <IconCode className="mr-2 h-12 w-12 " />
+                    className="px-4 py-14 text-white bg-secondary"
+                >
+                    <div className="max-w-7xl mx-auto space-y-12">
+                        <div className="flex">
+                            <IconSubtask
+                                className="mr-2 text-accent"
+                                size={48}
+                            />
+                            <h1 className="text-5xl font-bold">Experience</h1>
+                        </div>
+                        <div className="flex gap-4">
+                            <div className="p-4 space-y-4 flex justify-center flex-col">
+                                <div className="relative aspect-video min-w-36 p-2">
+                                    <Image
+                                        src={"/coin.png"}
+                                        alt="AGH COIN logo"
+                                        fill
+                                        sizes="144px"
+                                        className="object-contain"
+                                        title="AGH Code Industry"
+                                    />
+                                </div>
+                                <h2 className="font-semibold text-center">
+                                    2023 - present
+                                </h2>
+                            </div>
+                            <div className="flex flex-col space-y-4">
+                                <h2 className="text-3xl font-semibold">
+                                    AGH Code Industry
+                                </h2>
+                                <h3>Student Scientific Association</h3>
+                                <p>
+                                    As a dedicated member of the web development
+                                    team, I actively contribute to the
+                                    development and maintenance of the Student
+                                    Scientific Association
+                                    <strong> AGH Code Industry </strong>
+                                    website. Utilizing my expertise in Next.js
+                                    and React, I have significantly enhanced the
+                                    site&apos;s online presence and improved the
+                                    user experience. My collaboration with team
+                                    members has been instrumental in
+                                    implementing features that align with the
+                                    organization&apos;s needs, ensuring that the
+                                    website serves as an effective tool for our
+                                    community.
+                                </p>
+                                <div className="flex gap-2 items-center">
+                                    <h3 className="font-semibold">
+                                        Technologies used:
+                                    </h3>
+                                    <div className="flex gap-2 items-center">
+                                        <IconBrandNextjs aria-label="Nextjs" />
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
+                                        <IconBrandReact aria-label="React" />
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
+                                        <IconBrandTypescript aria-label="TypeScript" />
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
+                                        <IconBrandSass aria-label="Sass" />
+                                    </div>
+                                    <div className="grow h-0.5 bg-accent"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex gap-4">
+                            <div className="p-4 space-y-4 flex justify-center flex-col">
+                                <div className="relative aspect-video min-w-36 p-2">
+                                    <Image
+                                        src={"/skn.svg"}
+                                        alt="skn logo"
+                                        fill
+                                        sizes="144px"
+                                        className="object-contain"
+                                        title="AGH Code Industry"
+                                    />
+                                </div>
+                                <h2 className="font-semibold text-center">
+                                    2024 - present
+                                </h2>
+                            </div>
+                            <div className="flex flex-col space-y-4">
+                                <h2 className="text-3xl font-semibold">
+                                    Studenckie Koła Naukowe AGH
+                                </h2>
+                                <p>
+                                    As the Webmaster for{" "}
+                                    <strong>SKN AGH</strong>, I am responsible
+                                    for maintaining and updating the website
+                                    content for a major university organization
+                                    that impacts the majority of student
+                                    scientific associations. By utilizing
+                                    Contentful CMS, I ensure that the
+                                    website&apos;s content remains current and
+                                    accessible, thereby enhancing communication
+                                    and engagement among the student body. My
+                                    role is pivotal in facilitating the flow of
+                                    information and fostering a connected
+                                    community within the university.
+                                </p>
+                                <div className="grow h-0.5 bg-accent"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </section>
+                <section id="projects" className="px-4 py-14">
+                    <div className="max-w-7xl mx-auto space-y-10">
+                        <div className="flex justify-end">
+                            <h1 className="text-5xl font-bold">Projects</h1>
+                            <IconCode className="ml-2 text-accent" size={48} />
                         </div>
                         <div>
-                            <h2 className="flex items-center mb-4 text-3xl font-semibold pl-4">
+                            <h2 className="mb-4 text-3xl font-semibold pl-4">
                                 Car rental
                             </h2>
                             <div className="flex flex-col gap-2 md:flex-row">
@@ -129,21 +233,21 @@ export default function Home() {
                                 </Link>
                                 <div className="flex flex-col gap-2 md:w-1/2">
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="h-0.5 w-[5%] bg-background"></div>
+                                        <div className="h-0.5 w-[5%] bg-secondary"></div>
                                         <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandPrisma aria-label="Prisma" />
-                                        <div className="grow h-0.5 bg-background"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                     </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 bg-background py-2 mx-8 rounded-md">
+                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
                                         <IconAlertTriangle aria-label="warning" />
-                                        <h1>Work in progress</h1>
+                                        <h3>Work in progress</h3>
                                     </div>
                                     <p className="grow px-10 text-xl font-medium">
                                         Project is a car rental website. It
@@ -164,7 +268,7 @@ export default function Home() {
                                         >
                                             <IconBrandGithub />
                                         </Link>
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <Link
                                             aria-label="Vercel deployment"
                                             href={
@@ -173,7 +277,7 @@ export default function Home() {
                                         >
                                             <IconBrandVercel />
                                         </Link>
-                                        <div className="grow h-0.5 bg-background"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                     </div>
                                 </div>
                             </div>
@@ -185,23 +289,23 @@ export default function Home() {
                             <div className="flex flex-col gap-2 md:flex-row">
                                 <div className="flex flex-col gap-2 md:w-1/2">
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-background"></div>
+                                        <div className="grow h-0.5 bg-text"></div>
                                         <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <IconBrandDjango aria-label="Django" />
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <IconBrandStripe aria-label="Stripe" />
-                                        <div className="h-0.5 w-[5%] bg-background"></div>
+                                        <div className="h-0.5 w-[5%] bg-text"></div>
                                     </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 bg-background py-2 mx-8 rounded-md">
+                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
                                         <IconAlertTriangle aria-label="warning" />
-                                        <h1>Work in progress</h1>
+                                        <h3>Work in progress</h3>
                                     </div>
                                     <p className="grow px-10 text-xl font-medium">
                                         As part of a small team of two, I was
@@ -217,7 +321,7 @@ export default function Home() {
                                         user-friendly interface.
                                     </p>
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-background"></div>
+                                        <div className="grow h-0.5 bg-text"></div>
                                         <Link
                                             aria-label="Github repository"
                                             href={
@@ -226,7 +330,7 @@ export default function Home() {
                                         >
                                             <IconBrandGithub />
                                         </Link>
-                                        <div className="h-0.5 w-0.5 bg-background"></div>
+                                        <div className="h-0.5 w-0.5 bg-text"></div>
                                         <Link
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -252,17 +356,18 @@ export default function Home() {
                                 </Link>
                             </div>
                         </div>
-                        <h2 className="flex items-center justify-center py-4 text-3xl font-semibold">
-                            Frontend Mentor
+                        <div className="flex items-center justify-center py-4 text-3xl font-semibold">
+                            <h2>Frontend Mentor</h2>
                             <Link
                                 href={"https://www.frontendmentor.io/"}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="pl-4 text-background"
+                                className="pl-4"
+                                aria-label="Frontend Mentor link"
                             >
                                 <IconArrowUpRight />
                             </Link>
-                        </h2>
+                        </div>
                         <div className="mb-4 grid gap-4 place-items-center transition-all duration-1000 odd:delay-300 even:delay-700 sm:grid-cols-2 lg:grid-cols-3">
                             <FrontendMentor
                                 image="/advice.jpg"
@@ -310,8 +415,11 @@ export default function Home() {
                     className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-[1250ms] odd:delay-300 even:delay-700 md:pr-10"
                 >
                     <div className="flex">
-                        <IconAddressBook className="mr-2 h-12 w-12" />
-                        <h2 className="mb-4 text-5xl font-bold">Contact me</h2>
+                        <IconAddressBook
+                            className="mr-2 text-accent"
+                            size={48}
+                        />
+                        <h1 className="mb-4 text-5xl font-bold">Contact me</h1>
                     </div>
                     <div>
                         <p className="mb-4 text-center font-light md:text-xl">
@@ -323,7 +431,7 @@ export default function Home() {
                             <Link
                                 aria-label="mail"
                                 href="mailto:dominiksieron13@gmail.com"
-                                className="ml-4 flex justify-center rounded-md bg-primary-button p-2 px-4 text-background shadow-sm shadow-primary-button transition-all ease-in-out hover:shadow-md hover:shadow-primary-button"
+                                className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconMail />
                             </Link>
@@ -334,33 +442,17 @@ export default function Home() {
                                 }
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="ml-4 flex justify-center rounded-md bg-secondary-button p-2 px-4 text-background shadow-sm shadow-secondary-button transition-all ease-in-out hover:shadow-md hover:shadow-secondary-button"
+                                className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconBrandDiscord />
                             </Link>
                         </div>
                     </div>
                 </section>
-                <footer className="flex min-h-[100px] flex-col items-center justify-center space-y-2 border-t border-accent">
-                    <div className="flex space-x-4 md:hidden">
-                        <Link
-                            aria-label="github profile link"
-                            className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
-                            href={"https://github.com/CALLmeDOMIN"}
-                        >
-                            <IconBrandGithub />
-                        </Link>
-                        <Link
-                            aria-label="linkedin profile link"
-                            className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
-                            href={"https://www.linkedin.com/in/dominiksieron/"}
-                        >
-                            <IconBrandLinkedin />
-                        </Link>
-                    </div>
-                    <h1 className="md:text-lg">
-                        Designed and developed by{" "}
-                        <span className="text-accent">Dominik Sieroń</span>
+                <footer className="flex items-center font-semibold bg-secondary p-4 shadow-md">
+                    <h1>
+                        &copy;
+                        {" " + new Date().getFullYear()} Dominik Sieroń
                     </h1>
                 </footer>
             </div>

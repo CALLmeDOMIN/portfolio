@@ -37,7 +37,7 @@ function FrontendMentor({
                 target="_blank"
                 className={
                     "absolute bottom-1 left-2" +
-                    (whiteText ? " text-white" : " text-accent")
+                    (whiteText ? " text-text" : " text-secondary")
                 }
             >
                 <IconBrandGithub aria-label="github" />
@@ -48,7 +48,7 @@ function FrontendMentor({
                 target="_blank"
                 className={
                     "absolute bottom-1 left-9" +
-                    (whiteText ? " text-white" : " text-accent")
+                    (whiteText ? " text-text" : " text-secondary")
                 }
             >
                 <IconBrandVercel aria-label="vercel" />
@@ -56,14 +56,14 @@ function FrontendMentor({
             <IconBrandReact
                 className={
                     "absolute top-1 right-2" +
-                    (whiteText ? " text-white" : " text-accent")
+                    (whiteText ? " text-text" : " text-secondary")
                 }
                 aria-label="react"
             />
             <IconBrandTailwind
                 className={
                     "absolute top-1 right-9" +
-                    (whiteText ? " text-white" : " text-accent")
+                    (whiteText ? " text-text" : " text-secondary")
                 }
                 aria-label="tailwindcss"
             />
