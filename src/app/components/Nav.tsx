@@ -30,7 +30,16 @@ const Nav = () => {
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
-                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+                        className="transition-all duration-150 hover:text-accent"
+                        href={"#experience"}
+                    >
+                        Experience
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        onClick={() => setOpen(false)}
+                        className="transition-all duration-150 hover:text-accent"
                         href={"#projects"}
                     >
                         Projects
@@ -39,7 +48,7 @@ const Nav = () => {
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
-                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+                        className="transition-all duration-150 hover:text-accent"
                         href={"#contact"}
                     >
                         Contact
@@ -49,7 +58,7 @@ const Nav = () => {
                     <Link
                         passHref
                         onClick={() => setOpen(false)}
-                        className="transition-all duration-300 hover:-translate-y-1 hover:text-accent"
+                        className="transition-all duration-150 hover:text-accent"
                         href={"/CV.pdf"}
                         target="_blank"
                     >

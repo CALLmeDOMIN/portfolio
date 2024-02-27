@@ -32,7 +32,7 @@ export default function Home() {
                     className="mx-auto px-4 flex min-h-screen max-w-5xl flex-col justify-center"
                 >
                     <h1 className="text-3xl font-extralight">Hi, my name is</h1>
-                    <h1 className="-ml-1 text-7xl font-semibold text-accent">
+                    <h1 className="-ml-1 text-7xl font-semibold text-primary">
                         Dominik Sieroń.
                     </h1>
                     <p className="mt-4 max-w-[25ch] pl-2 pb-2 text-xl md:max-w-[50ch]">
@@ -47,31 +47,31 @@ export default function Home() {
                         .
                     </p>
                     <div className="flex items-center gap-2 pl-2">
-                        <div className="h-0.5 w-4 bg-accent"></div>
+                        <div className="h-0.5 w-4 bg-secondary"></div>
                         <Link
                             passHref
                             target="about:blank"
-                            className="hover:text-accent"
+                            className="hover:text-primary"
                             href="https://github.com/CALLmeDOMIN"
                             aria-label="Github profile link"
                         >
                             <IconBrandGithub size={24} />
                         </Link>
-                        <div className="h-0.5 w-0.5 bg-accent"></div>
+                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
                             passHref
                             target="about:blank"
-                            className="hover:text-accent"
+                            className="hover:text-primary"
                             href="https://www.linkedin.com/in/dominiksieron/"
                             aria-label="Linkedin profile link"
                         >
                             <IconBrandLinkedin size={24} />
                         </Link>
-                        <div className="h-0.5 w-0.5 bg-accent"></div>
+                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
                             passHref
                             target="about:blank"
-                            className="hover:text-accent"
+                            className="hover:text-primary"
                             href={"/CV.pdf"}
                             aria-label="CV pdf"
                         >
@@ -98,16 +98,19 @@ export default function Home() {
                                 <path d="M13 11l1.5 6l1.5 -6" />
                             </svg>
                         </Link>
-                        <div className="h-0.5 w-[40%] bg-accent"></div>
+                        <div className="h-0.5 w-[40%] bg-secondary"></div>
                     </div>
                 </main>
                 <section
                     id="experience"
-                    className="px-4 py-14 text-white bg-accent"
+                    className="px-4 py-14 text-white bg-secondary"
                 >
                     <div className="max-w-7xl mx-auto space-y-12">
                         <div className="flex">
-                            <IconSubtask className="mr-2" size={48} />
+                            <IconSubtask
+                                className="mr-2 text-accent"
+                                size={48}
+                            />
                             <h1 className="text-5xl font-bold">Experience</h1>
                         </div>
                         <div className="flex gap-4">
@@ -122,9 +125,9 @@ export default function Home() {
                                         title="AGH Code Industry"
                                     />
                                 </div>
-                                <h3 className="font-semibold text-center">
+                                <h2 className="font-semibold text-center">
                                     2023 - present
-                                </h3>
+                                </h2>
                             </div>
                             <div className="flex flex-col space-y-4">
                                 <h2 className="text-3xl font-semibold">
@@ -153,14 +156,14 @@ export default function Home() {
                                     </h3>
                                     <div className="flex gap-2 items-center">
                                         <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="w-0.5 h-0.5 bg-background"></div>
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
                                         <IconBrandReact aria-label="React" />
-                                        <div className="w-0.5 h-0.5 bg-background"></div>
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
                                         <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="w-0.5 h-0.5 bg-background"></div>
+                                        <div className="w-0.5 h-0.5 bg-accent"></div>
                                         <IconBrandSass aria-label="Sass" />
                                     </div>
-                                    <div className="grow h-0.5 bg-background"></div>
+                                    <div className="grow h-0.5 bg-accent"></div>
                                 </div>
                             </div>
                         </div>
@@ -176,13 +179,13 @@ export default function Home() {
                                         title="AGH Code Industry"
                                     />
                                 </div>
-                                <h3 className="font-semibold text-center">
+                                <h2 className="font-semibold text-center">
                                     2024 - present
-                                </h3>
+                                </h2>
                             </div>
                             <div className="flex flex-col space-y-4">
                                 <h2 className="text-3xl font-semibold">
-                                    Studenckie Kóła Naukowe AGH
+                                    Studenckie Koła Naukowe AGH
                                 </h2>
                                 <p>
                                     As the Webmaster for{" "}
@@ -199,7 +202,7 @@ export default function Home() {
                                     information and fostering a connected
                                     community within the university.
                                 </p>
-                                <div className="grow h-0.5 bg-background"></div>
+                                <div className="grow h-0.5 bg-accent"></div>
                             </div>
                         </div>
                     </div>
@@ -209,7 +212,7 @@ export default function Home() {
                     <div className="max-w-7xl mx-auto space-y-10">
                         <div className="flex justify-end">
                             <h1 className="text-5xl font-bold">Projects</h1>
-                            <IconCode className="ml-2" size={48} />
+                            <IconCode className="ml-2 text-accent" size={48} />
                         </div>
                         <div>
                             <h2 className="mb-4 text-3xl font-semibold pl-4">
@@ -231,19 +234,19 @@ export default function Home() {
                                 </Link>
                                 <div className="flex flex-col gap-2 md:w-1/2">
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="h-0.5 w-[5%] bg-text"></div>
+                                        <div className="h-0.5 w-[5%] bg-secondary"></div>
                                         <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandPrisma aria-label="Prisma" />
-                                        <div className="grow h-0.5 bg-text"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                     </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 bg-text py-2 mx-8 rounded-md">
+                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
                                         <IconAlertTriangle aria-label="warning" />
                                         <h3>Work in progress</h3>
                                     </div>
@@ -266,7 +269,7 @@ export default function Home() {
                                         >
                                             <IconBrandGithub />
                                         </Link>
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <Link
                                             aria-label="Vercel deployment"
                                             href={
@@ -275,7 +278,7 @@ export default function Home() {
                                         >
                                             <IconBrandVercel />
                                         </Link>
-                                        <div className="grow h-0.5 bg-text"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +304,7 @@ export default function Home() {
                                         <IconBrandStripe aria-label="Stripe" />
                                         <div className="h-0.5 w-[5%] bg-text"></div>
                                     </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 bg-text py-2 mx-8 rounded-md">
+                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
                                         <IconAlertTriangle aria-label="warning" />
                                         <h3>Work in progress</h3>
                                     </div>
@@ -359,6 +362,7 @@ export default function Home() {
                                 href={"https://www.frontendmentor.io/"}
                                 target="about:blank"
                                 className="pl-4"
+                                aria-label="Frontend Mentor link"
                             >
                                 <IconArrowUpRight />
                             </Link>
@@ -410,7 +414,10 @@ export default function Home() {
                     className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-[1250ms] odd:delay-300 even:delay-700 md:pr-10"
                 >
                     <div className="flex">
-                        <IconAddressBook className="mr-2" size={48} />
+                        <IconAddressBook
+                            className="mr-2 text-accent"
+                            size={48}
+                        />
                         <h1 className="mb-4 text-5xl font-bold">Contact me</h1>
                     </div>
                     <div>
@@ -423,7 +430,7 @@ export default function Home() {
                             <Link
                                 aria-label="mail"
                                 href="mailto:dominiksieron13@gmail.com"
-                                className="ml-4 flex justify-center rounded-md bg-primary-button p-2 px-4 text-background shadow-sm shadow-primary-button transition-all ease-in-out hover:shadow-md hover:shadow-primary-button"
+                                className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconMail />
                             </Link>
@@ -433,21 +440,18 @@ export default function Home() {
                                     "https://discord.com/users/320254777160368139"
                                 }
                                 target="about:blank"
-                                className="ml-4 flex justify-center rounded-md bg-secondary-button p-2 px-4 text-background shadow-sm shadow-secondary-button transition-all ease-in-out hover:shadow-md hover:shadow-secondary-button"
+                                className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconBrandDiscord />
                             </Link>
                         </div>
                     </div>
                 </section>
-                <footer className="flex items-center font-semibold border-t p-4 border-accent">
+                <footer className="flex items-center font-semibold bg-secondary p-4 shadow-md">
                     <h1>
-                        <span className="text-accent">&copy;</span>{" "}
-                        {new Date().getFullYear()} Dominik Sieroń
+                        &copy;
+                        {" " + new Date().getFullYear()} Dominik Sieroń
                     </h1>
-                    {
-                        //!Privacy policy
-                    }
                 </footer>
             </div>
         </>
