@@ -10,7 +10,6 @@ import {
     IconBrandNextjs,
     IconBrandPrisma,
     IconBrandReact,
-    IconBrandSass,
     IconBrandTailwind,
     IconBrandTypescript,
     IconBrandVercel,
@@ -42,16 +41,16 @@ export default function Home() {
                         <br />
                         at{" "}
                         <span className="text-accent">
-                            AGH University of Science and Technology
+                            AGH University of Cracow
                         </span>
                         .
                     </p>
                     <div className="flex items-center gap-2 pl-2">
                         <div className="h-0.5 w-4 bg-secondary"></div>
                         <Link
-                            passHref
-                            target="about:blank"
-                            className="hover:text-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary
                             href="https://github.com/CALLmeDOMIN"
                             aria-label="Github profile link"
                         >
@@ -59,8 +58,8 @@ export default function Home() {
                         </Link>
                         <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
-                            passHref
-                            target="about:blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-primary"
                             href="https://www.linkedin.com/in/dominiksieron/"
                             aria-label="Linkedin profile link"
@@ -69,8 +68,8 @@ export default function Home() {
                         </Link>
                         <div className="h-0.5 w-0.5 bg-secondary"></div>
                         <Link
-                            passHref
-                            target="about:blank"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="hover:text-primary"
                             href={"/CV.pdf"}
                             aria-label="CV pdf"
@@ -333,7 +332,8 @@ export default function Home() {
                                         </Link>
                                         <div className="h-0.5 w-0.5 bg-text"></div>
                                         <Link
-                                            target="about:blank"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             href={"https://mytriproutes.com"}
                                             aria-label="Mytriproutes link"
                                         >
@@ -360,7 +360,8 @@ export default function Home() {
                             <h2>Frontend Mentor</h2>
                             <Link
                                 href={"https://www.frontendmentor.io/"}
-                                target="about:blank"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="pl-4"
                                 aria-label="Frontend Mentor link"
                             >
@@ -439,7 +440,8 @@ export default function Home() {
                                 href={
                                     "https://discord.com/users/320254777160368139"
                                 }
-                                target="about:blank"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconBrandDiscord />

@@ -76,7 +76,7 @@ const Nav = () => {
                 onClick={() => setOpen(false)}
                 className={
                     "fixed top-0 left-0 z-[5] h-screen w-screen backdrop-blur transition-all duration-500 ease-in-out md:hidden md:backdrop-blur-none " +
-                    (open ? "opacity-100" : "opacity-0")
+                    (open ? "block opacity-100" : "hidden opacity-0")
                 }
             ></div>
         </nav>
