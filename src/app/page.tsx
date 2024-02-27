@@ -10,6 +10,7 @@ import {
     IconBrandNextjs,
     IconBrandPrisma,
     IconBrandReact,
+    IconBrandSass,
     IconBrandTailwind,
     IconBrandTypescript,
     IconBrandVercel,
@@ -50,9 +51,9 @@ export default function Home() {
                         <Link
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-primary
+                            className="hover:text-primary"
                             href="https://github.com/CALLmeDOMIN"
-                            aria-label="Github profile link"
+                            https:aria-label="Github profile link"
                         >
                             <IconBrandGithub size={24} />
                         </Link>
