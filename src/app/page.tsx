@@ -53,7 +53,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="hover:text-primary"
                             href="https://github.com/CALLmeDOMIN"
-                            https:aria-label="Github profile link"
+                            aria-label="Github profile link"
                         >
                             <IconBrandGithub size={24} />
                         </Link>
