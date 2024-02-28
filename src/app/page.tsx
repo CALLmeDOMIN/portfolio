@@ -113,9 +113,9 @@ export default function Home() {
                             />
                             <h1 className="text-5xl font-bold">Experience</h1>
                         </div>
-                        <div className="flex gap-4">
-                            <div className="p-4 space-y-4 flex justify-center flex-col">
-                                <div className="relative aspect-video min-w-36 p-2">
+                        <div className="flex gap-4 flex-col md:flex-row">
+                            <div className="p-2 md:p-4 space-y-4 flex justify-between md:justify-center flex-col">
+                                <div className="relative aspect-video min-w-36">
                                     <Image
                                         src={"/coin.png"}
                                         alt="AGH COIN logo"
@@ -167,7 +167,7 @@ export default function Home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex gap-4">
+                        <div className="flex gap-4 md:flex-row flex-col">
                             <div className="p-4 space-y-4 flex justify-center flex-col">
                                 <div className="relative aspect-video min-w-36 p-2">
                                     <Image
@@ -220,16 +220,16 @@ export default function Home() {
                             </h2>
                             <div className="flex flex-col gap-2 md:flex-row">
                                 <Link
-                                    className="md:w-1/2 md:flex md:items-center"
+                                    className="md:w-1/2 md:flex md:items-center relative aspect-video"
                                     href={"https://carrental.dsieron.pl"}
                                     aria-label="Mytriproutes preview and link"
                                 >
                                     <Image
                                         src={"/car-rental.png"}
                                         alt="car rental project"
-                                        width={1920}
-                                        height={1080}
-                                        className="rounded-xl shadow-md object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover  hover:scale-105 transition-all duration-300 ease-in-out"
                                     />
                                 </Link>
                                 <div className="flex flex-col gap-2 md:w-1/2">
@@ -343,16 +343,16 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <Link
-                                    className="md:w-1/2 md:flex md:items-center"
+                                    className="md:w-1/2 md:flex md:items-center relative aspect-video"
                                     href={"https://mytriproutes.com"}
                                     aria-label="Mytriproutes preview and link"
                                 >
                                     <Image
                                         src={"/mytriproutes.png"}
                                         alt="Mytriproutes"
-                                        width={1920}
-                                        height={1080}
-                                        className="rounded-xl shadow-md object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                                     />
                                 </Link>
                             </div>
