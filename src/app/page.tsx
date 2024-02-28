@@ -222,7 +222,7 @@ export default function Home() {
                                 <Link
                                     className="md:w-1/2 md:flex md:items-center relative aspect-video"
                                     href={"https://carrental.dsieron.pl"}
-                                    aria-label="Mytriproutes preview and link"
+                                    aria-label="car rental project preview and link"
                                 >
                                     <Image
                                         src={"/car-rental.png"}
@@ -290,19 +290,19 @@ export default function Home() {
                             <div className="flex flex-col gap-2 md:flex-row">
                                 <div className="flex flex-col gap-2 md:w-1/2">
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-text"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                         <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandDjango aria-label="Django" />
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <IconBrandStripe aria-label="Stripe" />
-                                        <div className="h-0.5 w-[5%] bg-text"></div>
+                                        <div className="h-0.5 w-[5%] bg-secondary"></div>
                                     </div>
                                     <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
                                         <IconAlertTriangle aria-label="warning" />
@@ -322,7 +322,7 @@ export default function Home() {
                                         user-friendly interface.
                                     </p>
                                     <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-text"></div>
+                                        <div className="grow h-0.5 bg-secondary"></div>
                                         <Link
                                             aria-label="Github repository"
                                             href={
@@ -331,7 +331,7 @@ export default function Home() {
                                         >
                                             <IconBrandGithub />
                                         </Link>
-                                        <div className="h-0.5 w-0.5 bg-text"></div>
+                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
                                         <Link
                                             target="_blank"
                                             rel="noopener noreferrer"
