@@ -130,9 +130,19 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="flex flex-col space-y-4">
-                                <h2 className="text-3xl font-semibold">
-                                    AGH Code Industry
-                                </h2>
+                                <Link
+                                    target="_blank"
+                                    href={"http://coin.agh.edu.pl"}
+                                    className="flex"
+                                >
+                                    <h2 className="text-3xl font-semibold">
+                                        AGH Code Industry
+                                    </h2>
+                                    <IconArrowUpRight
+                                        size={36}
+                                        className="-mt-1"
+                                    />
+                                </Link>
                                 <h3>Student Scientific Association</h3>
                                 <p>
                                     As a dedicated member of the web development
@@ -184,9 +194,19 @@ export default function Home() {
                                 </h2>
                             </div>
                             <div className="flex flex-col space-y-4">
-                                <h2 className="text-3xl font-semibold">
-                                    Studenckie Koła Naukowe AGH
-                                </h2>
+                                <Link
+                                    target="_blank"
+                                    href={"https://skn.agh.edu.pl"}
+                                    className="flex"
+                                >
+                                    <h2 className="text-3xl font-semibold">
+                                        Studenckie Koła Naukowe AGH
+                                    </h2>
+                                    <IconArrowUpRight
+                                        size={36}
+                                        className="-mt-1"
+                                    />
+                                </Link>
                                 <p>
                                     As the Webmaster for{" "}
                                     <strong>SKN AGH</strong>, I am responsible
