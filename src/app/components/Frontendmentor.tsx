@@ -8,7 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import React from "react"
 
-function FrontendMentor({
+const FrontendMentor = ({
     image,
     github,
     vercel,
@@ -20,7 +20,7 @@ function FrontendMentor({
     vercel: string
     alt: string
     whiteText?: boolean
-}) {
+}) => {
     return (
         <div className="relative max-w-xs max-h-44">
             <Image

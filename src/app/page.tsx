@@ -17,11 +17,13 @@ import {
     IconCode,
     IconMail,
     IconSubtask,
+    IconBrandStripe,
 } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
 import FrontendMentor from "./components/Frontendmentor"
-import { IconBrandStripe } from "@tabler/icons-react"
+import Experience from "./components/Experience"
+import { experienceData } from "@/utils/data"
 
 export default function Home() {
     return (
@@ -113,120 +115,10 @@ export default function Home() {
                             />
                             <h1 className="text-5xl font-bold">Experience</h1>
                         </div>
-                        <div className="flex gap-4 flex-col md:flex-row">
-                            <div className="p-2 md:p-4 space-y-4 flex justify-between md:justify-center flex-col">
-                                <div className="relative aspect-video min-w-36">
-                                    <Image
-                                        src={"/coin.png"}
-                                        alt="AGH COIN logo"
-                                        fill
-                                        sizes="144px"
-                                        className="object-contain"
-                                        title="AGH Code Industry"
-                                    />
-                                </div>
-                                <h2 className="font-semibold text-center">
-                                    2023 - present
-                                </h2>
-                            </div>
-                            <div className="flex flex-col space-y-4">
-                                <Link
-                                    target="_blank"
-                                    href={"http://coin.agh.edu.pl"}
-                                    className="flex"
-                                >
-                                    <h2 className="text-3xl font-semibold">
-                                        AGH Code Industry
-                                    </h2>
-                                    <IconArrowUpRight
-                                        size={36}
-                                        className="-mt-1"
-                                    />
-                                </Link>
-                                <h3>Student Scientific Association</h3>
-                                <p>
-                                    As a dedicated member of the web development
-                                    team, I actively contribute to the
-                                    development and maintenance of the Student
-                                    Scientific Association
-                                    <strong> AGH Code Industry </strong>
-                                    website. Utilizing my expertise in Next.js
-                                    and React, I have significantly enhanced the
-                                    site&apos;s online presence and improved the
-                                    user experience. My collaboration with team
-                                    members has been instrumental in
-                                    implementing features that align with the
-                                    organization&apos;s needs, ensuring that the
-                                    website serves as an effective tool for our
-                                    community.
-                                </p>
-                                <div className="flex gap-2 items-center">
-                                    <h3 className="font-semibold">
-                                        Technologies used:
-                                    </h3>
-                                    <div className="flex gap-2 items-center">
-                                        <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="w-0.5 h-0.5 bg-accent"></div>
-                                        <IconBrandReact aria-label="React" />
-                                        <div className="w-0.5 h-0.5 bg-accent"></div>
-                                        <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="w-0.5 h-0.5 bg-accent"></div>
-                                        <IconBrandSass aria-label="Sass" />
-                                    </div>
-                                    <div className="grow h-0.5 bg-accent"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex gap-4 md:flex-row flex-col">
-                            <div className="p-4 space-y-4 flex justify-center flex-col">
-                                <div className="relative aspect-video min-w-36 p-2">
-                                    <Image
-                                        src={"/skn.svg"}
-                                        alt="skn logo"
-                                        fill
-                                        sizes="144px"
-                                        className="object-contain"
-                                        title="AGH Code Industry"
-                                    />
-                                </div>
-                                <h2 className="font-semibold text-center">
-                                    2024 - present
-                                </h2>
-                            </div>
-                            <div className="flex flex-col space-y-4">
-                                <Link
-                                    target="_blank"
-                                    href={"https://skn.agh.edu.pl"}
-                                    className="flex"
-                                >
-                                    <h2 className="text-3xl font-semibold">
-                                        Studenckie Koła Naukowe AGH
-                                    </h2>
-                                    <IconArrowUpRight
-                                        size={36}
-                                        className="-mt-1"
-                                    />
-                                </Link>
-                                <p>
-                                    As the Webmaster for{" "}
-                                    <strong>SKN AGH</strong>, I am responsible
-                                    for maintaining and updating the website
-                                    content for a major university organization
-                                    that impacts the majority of student
-                                    scientific associations. By utilizing
-                                    Contentful CMS, I ensure that the
-                                    website&apos;s content remains current and
-                                    accessible, thereby enhancing communication
-                                    and engagement among the student body. My
-                                    role is pivotal in facilitating the flow of
-                                    information and fostering a connected
-                                    community within the university.
-                                </p>
-                                <div className="grow h-0.5 bg-accent"></div>
-                            </div>
-                        </div>
+                        {experienceData.map((experience, key) => (
+                            <Experience key={key} {...experience} />
+                        ))}
                     </div>
-                    <div></div>
                 </section>
                 <section id="projects" className="px-4 py-14">
                     <div className="max-w-7xl mx-auto space-y-10">
