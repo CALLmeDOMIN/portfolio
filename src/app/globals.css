@@ -4,6 +4,10 @@
 @tailwind utilities;
 
 .tooltip-container .tooltip {
-    background-color: rgba(15, 11, 14) !important;
-    font-weight: 500 !important;
+    background-color: rgba(15, 11, 14);
+    font-weight: 500;
+}
+
+.tooltip-container .tooltip-accent {
+    background-color: #c8b15f;
 }

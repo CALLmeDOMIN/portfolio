@@ -1,13 +1,17 @@
 import {
     IconBrandBootstrap,
+    IconBrandDjango,
     IconBrandGatsby,
     IconBrandJavascript,
     IconBrandNextjs,
+    IconBrandPrisma,
     IconBrandReact,
     IconBrandSass,
+    IconBrandStripe,
+    IconBrandTailwind,
     IconBrandTypescript,
 } from "@tabler/icons-react"
-import { type Experience } from "./types"
+import { Project, type Experience } from "./types"
 
 export const experienceData: Experience[] = [
     {
@@ -77,5 +81,104 @@ export const experienceData: Experience[] = [
                 ),
             },
         ],
+    },
+]
+
+export const projectData: Project[] = [
+    // {
+    //     title: "UXberries",
+    //     desc: "",
+    //     link: "",
+    //     githubLink: "https://github.com/CALLmeDOMIN/uxberries",
+    //     imageUrl: "/uxberries.png",
+    //     isWorkInProgress: false,
+    //     technologies: [],
+    //     align: "left",
+    // },
+    {
+        title: "Car rental",
+        desc: "Project is a car rental website. It symulates a car rental company. The intention is to learn web development, new technologies and build a fully functional site. It is a work in progress and will be updated with new features, since its purpose is to learn newest things in practice.",
+        link: "https://carrental.dsieron.pl",
+        githubLink: "https://github.com/CALLmeDOMIN/car-rental",
+        imageUrl: "/car-rental.png",
+        isWorkInProgress: true,
+        technologies: [
+            {
+                name: "Nextjs",
+                icon: <IconBrandNextjs aria-label="Nextjs" id="Nextjs" />,
+            },
+            {
+                name: "React",
+                icon: <IconBrandReact aria-label="React" id="React" />,
+            },
+            {
+                name: "TypeScript",
+                icon: (
+                    <IconBrandTypescript
+                        aria-label="TypeScript"
+                        id="TypeScript"
+                    />
+                ),
+            },
+            {
+                name: "Tailwindcss",
+                icon: (
+                    <IconBrandTailwind
+                        aria-label="Tailwindcss"
+                        id="Tailwindcss"
+                    />
+                ),
+            },
+            {
+                name: "Prisma",
+                icon: <IconBrandPrisma aria-label="Prisma" id="Prisma" />,
+            },
+        ],
+        align: "left",
+    },
+    {
+        title: "mytriproutes",
+        desc: "As part of a small team of two, I was responsible for frontend development and design in the mytriproutes project. We had specific technical goals in mind throughout the project, with a focus on providing users with an intuitive interface and ensuring high website performance. Overall, MyTripRoutes simplifies trip planning, sharing, and the storage of photos and routes in a user-friendly interface.",
+        link: "https://mytriproutes.com",
+        githubLink: "https://github.com/mytriproutes",
+        imageUrl: "/mytriproutes.png",
+        isWorkInProgress: true,
+        technologies: [
+            {
+                name: "Nextjs",
+                icon: <IconBrandNextjs aria-label="Nextjs" id="Nextjs" />,
+            },
+            {
+                name: "React",
+                icon: <IconBrandReact aria-label="React" id="React" />,
+            },
+            {
+                name: "TypeScript",
+                icon: (
+                    <IconBrandTypescript
+                        aria-label="TypeScript"
+                        id="TypeScript"
+                    />
+                ),
+            },
+            {
+                name: "Tailwindcss",
+                icon: (
+                    <IconBrandTailwind
+                        aria-label="Tailwindcss"
+                        id="Tailwindcss"
+                    />
+                ),
+            },
+            {
+                name: "Django",
+                icon: <IconBrandDjango aria-label="Django" id="Django" />,
+            },
+            {
+                name: "Stripe",
+                icon: <IconBrandStripe aria-label="Stripe" id="Stripe" />,
+            },
+        ],
+        align: "right",
     },
 ]

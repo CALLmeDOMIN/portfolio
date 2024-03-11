@@ -1,29 +1,18 @@
 import {
     IconAddressBook,
-    IconAlertTriangle,
     IconArrowUpRight,
     IconBrandDiscord,
-    IconBrandDjango,
-    IconBrandFirefox,
     IconBrandGithub,
     IconBrandLinkedin,
-    IconBrandNextjs,
-    IconBrandPrisma,
-    IconBrandReact,
-    IconBrandSass,
-    IconBrandTailwind,
-    IconBrandTypescript,
-    IconBrandVercel,
     IconCode,
     IconMail,
     IconSubtask,
-    IconBrandStripe,
 } from "@tabler/icons-react"
-import Image from "next/image"
 import Link from "next/link"
 import FrontendMentor from "./components/Frontendmentor"
 import Experience from "./components/Experience"
-import { experienceData } from "@/utils/data"
+import { experienceData, projectData } from "@/utils/data"
+import Project from "./components/Project"
 
 export default function Home() {
     return (
@@ -126,149 +115,9 @@ export default function Home() {
                             <h1 className="text-5xl font-bold">Projects</h1>
                             <IconCode className="ml-2 text-accent" size={48} />
                         </div>
-                        <div>
-                            <h2 className="mb-4 text-3xl font-semibold pl-4">
-                                Car rental
-                            </h2>
-                            <div className="flex flex-col gap-2 md:flex-row">
-                                <Link
-                                    className="md:w-1/2 md:flex md:items-center relative aspect-video"
-                                    href={"https://carrental.dsieron.pl"}
-                                    aria-label="car rental project preview and link"
-                                >
-                                    <Image
-                                        src={"/car-rental.png"}
-                                        alt="car rental project"
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover  hover:scale-105 transition-all duration-300 ease-in-out"
-                                    />
-                                </Link>
-                                <div className="flex flex-col gap-2 md:w-1/2">
-                                    <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="h-0.5 w-[5%] bg-secondary"></div>
-                                        <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandPrisma aria-label="Prisma" />
-                                        <div className="grow h-0.5 bg-secondary"></div>
-                                    </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
-                                        <IconAlertTriangle aria-label="warning" />
-                                        <h3>Work in progress</h3>
-                                    </div>
-                                    <p className="grow px-10 text-xl font-medium">
-                                        Project is a car rental website. It
-                                        symulates a car rental company. The
-                                        intention is to learn web development,
-                                        new technologies and build a fully
-                                        functional site. It is a work in
-                                        progress and will be updated with new
-                                        features, since its purpose is to learn
-                                        newest things in practice.
-                                    </p>
-                                    <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <Link
-                                            aria-label="Github repository"
-                                            href={
-                                                "https://github.com/CALLmeDOMIN/car-rental"
-                                            }
-                                        >
-                                            <IconBrandGithub />
-                                        </Link>
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <Link
-                                            aria-label="Vercel deployment"
-                                            href={
-                                                "https://carrental.dsieron.pl"
-                                            }
-                                        >
-                                            <IconBrandVercel />
-                                        </Link>
-                                        <div className="grow h-0.5 bg-secondary"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="my-8 md:my-16">
-                            <h2 className="flex items-center mb-4 text-3xl font-semibold pl-4">
-                                mytriproutes
-                            </h2>
-                            <div className="flex flex-col gap-2 md:flex-row">
-                                <div className="flex flex-col gap-2 md:w-1/2">
-                                    <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-secondary"></div>
-                                        <IconBrandNextjs aria-label="Nextjs" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandReact aria-label="React" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandTypescript aria-label="TypeScript" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandTailwind aria-label="Tailwindcss" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandDjango aria-label="Django" />
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <IconBrandStripe aria-label="Stripe" />
-                                        <div className="h-0.5 w-[5%] bg-secondary"></div>
-                                    </div>
-                                    <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
-                                        <IconAlertTriangle aria-label="warning" />
-                                        <h3>Work in progress</h3>
-                                    </div>
-                                    <p className="grow px-10 text-xl font-medium">
-                                        As part of a small team of two, I was
-                                        responsible for frontend development and
-                                        design in the mytriproutes project. We
-                                        had specific technical goals in mind
-                                        throughout the project, with a focus on
-                                        providing users with an intuitive
-                                        interface and ensuring high website
-                                        performance. Overall, MyTripRoutes
-                                        simplifies trip planning, sharing, and
-                                        the storage of photos and routes in a
-                                        user-friendly interface.
-                                    </p>
-                                    <div className="my-4 flex items-center gap-2 px-4 pr-6">
-                                        <div className="grow h-0.5 bg-secondary"></div>
-                                        <Link
-                                            aria-label="Github repository"
-                                            href={
-                                                "https://github.com/mytriproutes"
-                                            }
-                                        >
-                                            <IconBrandGithub />
-                                        </Link>
-                                        <div className="h-0.5 w-0.5 bg-secondary"></div>
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            href={"https://mytriproutes.com"}
-                                            aria-label="Mytriproutes link"
-                                        >
-                                            <IconBrandFirefox />
-                                        </Link>
-                                    </div>
-                                </div>
-                                <Link
-                                    className="md:w-1/2 md:flex md:items-center relative aspect-video"
-                                    href={"https://mytriproutes.com"}
-                                    aria-label="Mytriproutes preview and link"
-                                >
-                                    <Image
-                                        src={"/mytriproutes.png"}
-                                        alt="Mytriproutes"
-                                        fill
-                                        sizes="(max-width: 768px) 100vw, 50vw"
-                                        className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover hover:scale-105 transition-all duration-300 ease-in-out"
-                                    />
-                                </Link>
-                            </div>
-                        </div>
+                        {projectData.map((project, key) => (
+                            <Project key={key} {...project} />
+                        ))}
                         <div className="flex items-center justify-center py-4 text-3xl font-semibold">
                             <h2>Frontend Mentor</h2>
                             <Link

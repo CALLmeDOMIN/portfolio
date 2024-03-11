@@ -6,15 +6,17 @@ import { Tooltip } from "react-tooltip"
 const TechTooltip = ({
     name,
     children,
+    isAccent = false,
 }: {
     name: string
     children: React.ReactNode
+    isAccent?: boolean
 }) => {
     return (
         <span className="tooltip-container">
             {children}
             <Tooltip
-                className="tooltip"
+                className={`tooltip ${isAccent && "tooltip-accent"}`}
                 anchorSelect={`#${name}`}
                 content={name}
                 opacity={1}

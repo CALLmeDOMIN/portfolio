@@ -8,6 +8,17 @@ export type Experience = {
     technologies: Technology[]
 }
 
+export type Project = {
+    title: string
+    desc: string
+    link: string
+    githubLink: string
+    imageUrl: string
+    isWorkInProgress: boolean
+    technologies: Technology[]
+    align: "left" | "right"
+}
+
 type Technology = {
     name: string
     icon: React.ReactNode

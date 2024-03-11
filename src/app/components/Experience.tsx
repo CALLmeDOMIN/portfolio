@@ -1,10 +1,10 @@
-import { IconArrowUpRight } from "@tabler/icons-react"
+import React from "react"
 import Image from "next/image"
 import Link from "next/link"
-import React from "react"
-import TechTooltip from "./TechTooltip"
-import { type Experience } from "@/utils/types"
 import parse from "html-react-parser"
+import { IconArrowUpRight } from "@tabler/icons-react"
+import { type Experience } from "@/utils/types"
+import TechTooltip from "./TechTooltip"
 
 const Experience = ({
     title,
