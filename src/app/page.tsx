@@ -192,7 +192,7 @@ export default function Home() {
                         <div className="flex justify-center gap-4">
                             <Link
                                 aria-label="mail"
-                                href="mailto:dominiksieron13@gmail.com"
+                                href="mailto:contact@dsieron.pl"
                                 className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
                             >
                                 <IconMail />
