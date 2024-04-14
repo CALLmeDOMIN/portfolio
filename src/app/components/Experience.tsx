@@ -47,7 +47,10 @@ const Experience = ({
                     <div className="flex gap-2 items-center grow">
                         {technologies.map((tech, index) => (
                             <React.Fragment key={index}>
-                                <TechTooltip name={tech.name}>
+                                <TechTooltip
+                                    name={tech.name}
+                                    content={tech.content}
+                                >
                                     {tech.icon}
                                 </TechTooltip>
                                 <div

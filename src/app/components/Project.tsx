@@ -46,7 +46,11 @@ const Project = ({
                         />
                         {technologies.map((tech, index) => (
                             <React.Fragment key={index}>
-                                <TechTooltip name={tech.name} isAccent>
+                                <TechTooltip
+                                    name={tech.name}
+                                    isAccent
+                                    content={tech.content}
+                                >
                                     {tech.icon}
                                 </TechTooltip>
                                 <div

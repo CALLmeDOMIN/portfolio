@@ -21,5 +21,6 @@ export type Project = {
 
 type Technology = {
     name: string
+    content: string
     icon: React.ReactNode
 }

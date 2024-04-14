@@ -24,14 +24,17 @@ export const experienceData: Experience[] = [
         technologies: [
             {
                 name: "Nextjs",
+                content: "Nextjs",
                 icon: <IconBrandNextjs aria-label="Nextjs" id="Nextjs" />,
             },
             {
                 name: "React",
+                content: "React",
                 icon: <IconBrandReact aria-label="React" id="React" />,
             },
             {
                 name: "TypeScript",
+                content: "TypeScript",
                 icon: (
                     <IconBrandTypescript
                         aria-label="TypeScript"
@@ -41,6 +44,7 @@ export const experienceData: Experience[] = [
             },
             {
                 name: "Sass",
+                content: "Sass",
                 icon: <IconBrandSass aria-label="Sass" id="Sass" />,
             },
         ],
@@ -55,14 +59,17 @@ export const experienceData: Experience[] = [
         technologies: [
             {
                 name: "Gatsbyjs",
+                content: "Gatsbyjs",
                 icon: <IconBrandGatsby aria-label="Gatsbyjs" id="Gatsbyjs" />,
             },
             {
                 name: "React",
+                content: "React",
                 icon: <IconBrandReact aria-label="React" id="React" />,
             },
             {
                 name: "JavaScript",
+                content: "JavaScript",
                 icon: (
                     <IconBrandJavascript
                         aria-label="JavaScript"
@@ -72,10 +79,12 @@ export const experienceData: Experience[] = [
             },
             {
                 name: "Sass",
+                content: "Sass",
                 icon: <IconBrandSass aria-label="Sass" id="Sass" />,
             },
             {
                 name: "Bootstrap",
+                content: "Bootstrap",
                 icon: (
                     <IconBrandBootstrap aria-label="Bootstrap" id="Bootstrap" />
                 ),
@@ -94,7 +103,8 @@ export const projectData: Project[] = [
         isWorkInProgress: false,
         technologies: [
             {
-                name: "Astro",
+                name: "Astro-yellow",
+                content: "Astro",
                 icon: (
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +118,7 @@ export const projectData: Project[] = [
                         stroke-linejoin="round"
                         className="icon icon-tabler icons-tabler-outline icon-tabler-brand-astro"
                         aria-label="Astro"
-                        id="Astro"
+                        id="Astro-yellow"
                     >
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                         <path d="M14.972 3.483c.163 .196 .247 .46 .413 .987l3.64 11.53a15.5 15.5 0 0 0 -4.352 -1.42l-2.37 -7.723a.31 .31 0 0 0 -.296 -.213a.31 .31 0 0 0 -.295 .214l-2.342 7.718a15.5 15.5 0 0 0 -4.37 1.422l3.657 -11.53c.168 -.527 .251 -.79 .415 -.986c.144 -.172 .331 -.306 .544 -.388c.242 -.094 .527 -.094 1.099 -.094h2.612c.572 0 .858 0 1.1 .094c.213 .082 .4 .217 .545 .39" />
@@ -117,24 +127,27 @@ export const projectData: Project[] = [
                 ),
             },
             {
-                name: "React",
-                icon: <IconBrandReact aria-label="React" id="React" />,
+                name: "React-yellow",
+                content: "React",
+                icon: <IconBrandReact aria-label="React" id="React-yellow" />,
             },
             {
-                name: "TypeScript",
+                name: "TypeScript-yellow",
+                content: "TypeScript",
                 icon: (
                     <IconBrandTypescript
                         aria-label="TypeScript"
-                        id="TypeScript"
+                        id="TypeScript-yellow"
                     />
                 ),
             },
             {
-                name: "Tailwindcss",
+                name: "Tailwindcss-yellow",
+                content: "Tailwindcss",
                 icon: (
                     <IconBrandTailwind
                         aria-label="Tailwindcss"
-                        id="Tailwindcss"
+                        id="Tailwindcss-yellow"
                     />
                 ),
             },
@@ -150,34 +163,43 @@ export const projectData: Project[] = [
         isWorkInProgress: true,
         technologies: [
             {
-                name: "Nextjs",
-                icon: <IconBrandNextjs aria-label="Nextjs" id="Nextjs" />,
+                name: "Nextjs-yellow",
+                content: "Nextjs",
+                icon: (
+                    <IconBrandNextjs aria-label="Nextjs" id="Nextjs-yellow" />
+                ),
             },
             {
-                name: "React",
-                icon: <IconBrandReact aria-label="React" id="React" />,
+                name: "React-yellow",
+                content: "React",
+                icon: <IconBrandReact aria-label="React" id="React-yellow" />,
             },
             {
-                name: "TypeScript",
+                name: "TypeScript-yellow",
+                content: "TypeScript",
                 icon: (
                     <IconBrandTypescript
                         aria-label="TypeScript"
-                        id="TypeScript"
+                        id="TypeScript-yellow"
                     />
                 ),
             },
             {
-                name: "Tailwindcss",
+                name: "Tailwindcss-yellow",
+                content: "Tailwindcss",
                 icon: (
                     <IconBrandTailwind
                         aria-label="Tailwindcss"
-                        id="Tailwindcss"
+                        id="Tailwindcss-yellow"
                     />
                 ),
             },
             {
-                name: "Prisma",
-                icon: <IconBrandPrisma aria-label="Prisma" id="Prisma" />,
+                name: "Prisma-yellow",
+                content: "Prisma",
+                icon: (
+                    <IconBrandPrisma aria-label="Prisma" id="Prisma-yellow" />
+                ),
             },
         ],
         align: "right",
@@ -191,38 +213,50 @@ export const projectData: Project[] = [
         isWorkInProgress: true,
         technologies: [
             {
-                name: "Nextjs",
-                icon: <IconBrandNextjs aria-label="Nextjs" id="Nextjs" />,
+                name: "Nextjs-yellow",
+                content: "Nextjs",
+                icon: (
+                    <IconBrandNextjs aria-label="Nextjs" id="Nextjs-yellow" />
+                ),
             },
             {
-                name: "React",
-                icon: <IconBrandReact aria-label="React" id="React" />,
+                name: "React-yellow",
+                content: "React",
+                icon: <IconBrandReact aria-label="React" id="React-yellow" />,
             },
             {
-                name: "TypeScript",
+                name: "TypeScript-yellow",
+                content: "TypeScript",
                 icon: (
                     <IconBrandTypescript
                         aria-label="TypeScript"
-                        id="TypeScript"
+                        id="TypeScript-yellow"
                     />
                 ),
             },
             {
-                name: "Tailwindcss",
+                name: "Tailwindcss-yellow",
+                content: "Tailwindcss",
                 icon: (
                     <IconBrandTailwind
                         aria-label="Tailwindcss"
-                        id="Tailwindcss"
+                        id="Tailwindcss-yellow"
                     />
                 ),
             },
             {
-                name: "Django",
-                icon: <IconBrandDjango aria-label="Django" id="Django" />,
+                name: "Django-yellow",
+                content: "Django",
+                icon: (
+                    <IconBrandDjango aria-label="Django" id="Django-yellow" />
+                ),
             },
             {
-                name: "Stripe",
-                icon: <IconBrandStripe aria-label="Stripe" id="Stripe" />,
+                name: "Stripe-yellow",
+                content: "Stripe",
+                icon: (
+                    <IconBrandStripe aria-label="Stripe" id="Stripe-yellow" />
+                ),
             },
         ],
         align: "left",
