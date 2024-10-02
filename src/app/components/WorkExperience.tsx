@@ -1,22 +1,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import parse from "html-react-parser";
 import { IconArrowUpRight } from "@tabler/icons-react";
-import { type Experience } from "@/utils/types";
 import TechTooltip from "./TechTooltip";
+import { type WorkExperience } from "@/utils/types";
 import { formatDate } from "@/utils/utils";
 
-const Experience = ({
+const WorkExperience = ({
     title,
-    sub,
-    desc,
+    company,
     dateStart,
     dateEnd,
+    bullets,
     link,
     imageUrl,
     technologies,
-}: Experience) => {
+}: WorkExperience) => {
     return (
         <div className="flex flex-col gap-4 md:flex-row">
             <div className="flex flex-col justify-between space-y-4 p-2 md:justify-center md:p-4">
@@ -44,8 +43,12 @@ const Experience = ({
                         />
                     </h2>
                 </Link>
-                <h3>{sub}</h3>
-                <p>{parse(desc)}</p>
+                <h3>{company}</h3>
+                <ul className="list-disc space-y-4 pl-4 md:pl-0">
+                    {bullets.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
+                    ))}
+                </ul>
                 <div className="flex flex-col gap-2 md:flex-row md:items-center">
                     <h3 className="font-semibold">Technologies used:</h3>
                     <div className="flex grow items-center gap-2">
@@ -69,4 +72,4 @@ const Experience = ({
     );
 };
 
-export default Experience;
+export default WorkExperience;

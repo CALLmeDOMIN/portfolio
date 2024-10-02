@@ -2,7 +2,9 @@ import {
     IconBrandBootstrap,
     IconBrandDjango,
     IconBrandGatsby,
+    IconBrandGolang,
     IconBrandJavascript,
+    IconBrandMongodb,
     IconBrandNextjs,
     IconBrandPrisma,
     IconBrandReact,
@@ -10,16 +12,17 @@ import {
     IconBrandStripe,
     IconBrandTailwind,
     IconBrandTypescript,
-} from "@tabler/icons-react"
-import { Project, type Experience } from "./types"
+} from "@tabler/icons-react";
+import { type Project, type WorkExperience, type Experience } from "./types";
 
-export const experienceData: Experience[] = [
+const experienceData: Experience[] = [
     {
         title: "AGH Code Industry",
         sub: "Student Scientific Association",
         desc: "As a dedicated member of the web development team, I actively contribute to the development and maintenance of the Student Scientific Association <strong> AGH Code Industry </strong> website. Utilizing my expertise in Next.js and React, I have significantly enhanced the site&apos;s online presence and improved the user experience. My collaboration with team members has been instrumental in implementing features that align with the organization&apos;s needs, ensuring that the website serves as an effective tool for our community.",
-        date: "2023",
-        link: "http://coin.agh.edu.pl",
+        dateStart: new Date("2023-10-01"),
+        dateEnd: null,
+        link: "https://coin.agh.edu.pl",
         imageUrl: "/coin.png",
         technologies: [
             {
@@ -53,7 +56,8 @@ export const experienceData: Experience[] = [
         title: "Studenckie Koła Naukowe AGH",
         sub: "",
         desc: "As the Webmaster for <strong>SKN AGH</strong>, I play a crucial role in managing and updating the website content for a leading university organization that influences numerous student scientific associations. My responsibilities extend beyond utilizing <strong>Contentful CMS</strong> to ensure the site's content is up-to-date and accessible. I am also tasked with maintaining the website, which is developed using <strong>GatsbyJS</strong> and <strong>React</strong>, thereby guaranteeing optimal performance and user experience. My contributions are instrumental in facilitating effective communication and engagement among the student community, thereby fostering a sense of connection and collaboration within the university.",
-        date: "2024",
+        dateStart: new Date("2024-01-01"),
+        dateEnd: null,
         link: "https://skn.agh.edu.pl",
         imageUrl: "/skn.svg",
         technologies: [
@@ -91,9 +95,9 @@ export const experienceData: Experience[] = [
             },
         ],
     },
-]
+];
 
-export const projectData: Project[] = [
+const projectData: Project[] = [
     {
         title: "UXberries",
         desc: "The project focused on creating a scalable, maintainable codebase that would facilitate future enhancements and integration of new features. The result is a sophisticated platform that not only enhances the association's digital footprint but also serves as a vital resource for student collaboration and scientific discourse",
@@ -261,4 +265,57 @@ export const projectData: Project[] = [
         ],
         align: "left",
     },
-]
+];
+
+const workExperienceData: WorkExperience[] = [
+    {
+        title: "Intern Software Engineer",
+        company: "SpotOn",
+        dateStart: new Date("2024-07-01"),
+        dateEnd: new Date("2024-09-30"),
+        bullets: [
+            "Contributed to the design and implementation of a new service using Golang and gRPC, with a focus on building scalable and efficient backend solutions.",
+            "Developed a migration script for MongoDB, ensuring smooth data transitions and contributing to the overall stability of the database infrastructure.",
+            "Worked closely with engineers and other teams to implement service architecture, troubleshoot backend issues, and optimize communication between services.",
+            "Worked with GitHub Actions to automate testing and deployment pipelines, streamlining development workflows and improving team efficiency.",
+            "Assisted with migrating a service to the company's design system using TypeScript, React, and SCSS, ensuring consistency with the updated UI/UX standards.",
+            "Contributed to resolving front-end bugs and improving user experience, aligning front-end components with project goals.",
+        ],
+        imageUrl: "/spoton.svg",
+        link: "https://pl.spoton.com/",
+        technologies: [
+            {
+                name: "Golang",
+                content: "Golang",
+                icon: <IconBrandGolang aria-label="Golang" id="Golang" />,
+            },
+            {
+                name: "Mongodb",
+                content: "Mongodb",
+                icon: <IconBrandMongodb aria-label="Mongodb" id="Mongodb" />,
+            },
+            {
+                name: "Typescript",
+                content: "Typescript",
+                icon: (
+                    <IconBrandTypescript
+                        aria-label="Typescript"
+                        id="Typescript"
+                    />
+                ),
+            },
+            {
+                name: "React",
+                content: "React",
+                icon: <IconBrandReact aria-label="React" id="React" />,
+            },
+            {
+                name: "Sass",
+                content: "Sass",
+                icon: <IconBrandSass aria-label="Sass" id="Sass" />,
+            },
+        ],
+    },
+];
+
+export { workExperienceData, projectData, experienceData };

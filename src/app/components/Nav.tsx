@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react"
-import Link from "next/link"
-import { useState } from "react"
+import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const Nav = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
     return (
         <nav className="fixed top-0 z-10 flex w-screen items-center justify-between gap-8 bg-background p-8 text-text shadow-xl transition-all duration-500 ease-in-out md:px-10 md:opacity-90">
             <Link className="text-xl font-bold" href={"#home"}>
@@ -17,7 +17,7 @@ const Nav = () => {
             </Link>
             <div
                 onClick={() => setOpen(!open)}
-                className="z-20 aspect-square h-full cursor-pointer text-3xl text-primary-button transition-all duration-500 md:hidden"
+                className="text-primary-button z-20 aspect-square h-full cursor-pointer text-3xl transition-all duration-500 md:hidden"
             >
                 {open ? <IconX /> : <IconMenu2 />}
             </div>
@@ -27,6 +27,15 @@ const Nav = () => {
                     (open ? "right-0" : "-right-full")
                 }
             >
+                <li>
+                    <Link
+                        onClick={() => setOpen(false)}
+                        className="transition-all duration-150 hover:text-accent"
+                        href={"#workExperience"}
+                    >
+                        Work
+                    </Link>
+                </li>
                 <li>
                     <Link
                         onClick={() => setOpen(false)}
@@ -75,12 +84,12 @@ const Nav = () => {
             <div
                 onClick={() => setOpen(false)}
                 className={
-                    "fixed top-0 left-0 z-[5] h-screen w-screen backdrop-blur transition-all duration-500 ease-in-out md:hidden md:backdrop-blur-none " +
+                    "fixed left-0 top-0 z-[5] h-screen w-screen backdrop-blur transition-all duration-500 ease-in-out md:hidden md:backdrop-blur-none " +
                     (open ? "block opacity-100" : "hidden opacity-0")
                 }
             ></div>
         </nav>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;

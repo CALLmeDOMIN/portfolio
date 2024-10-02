@@ -1,13 +1,13 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import {
     IconAlertTriangle,
     IconBrandChrome,
     IconBrandGithub,
-} from "@tabler/icons-react"
-import { type Project } from "@/utils/types"
-import TechTooltip from "./TechTooltip"
+} from "@tabler/icons-react";
+import { type Project } from "@/utils/types";
+import TechTooltip from "./TechTooltip";
 
 const Project = ({
     title,
@@ -21,11 +21,11 @@ const Project = ({
 }: Project) => {
     return (
         <div className="my-8 md:my-16">
-            <h2 className="mb-4 text-3xl font-semibold pl-4">{title}</h2>
+            <h2 className="mb-4 pl-4 text-3xl font-semibold">{title}</h2>
             <div className="flex flex-col gap-2 md:flex-row">
                 {align === "left" && (
                     <Link
-                        className="md:w-1/2 md:flex md:items-center relative aspect-video"
+                        className="relative aspect-video md:flex md:w-1/2 md:items-center"
                         href={link}
                         target="_blank"
                         aria-label={title}
@@ -35,7 +35,7 @@ const Project = ({
                             alt={title}
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover  hover:scale-105 transition-all duration-300 ease-in-out"
+                            className="rounded-xl object-cover shadow-md transition-all duration-300  ease-in-out hover:scale-105 md:object-contain lg:object-cover"
                         />
                     </Link>
                 )}
@@ -63,7 +63,7 @@ const Project = ({
                         />
                     </div>
                     {isWorkInProgress && (
-                        <div className="flex justify-center gap-2 text-orange-400 border-2 border-primary py-2 mx-8 rounded-md">
+                        <div className="mx-8 flex justify-center gap-2 rounded-md border-2 border-primary py-2 text-orange-400">
                             <IconAlertTriangle aria-label="warning" />
                             <h3>Work in progress</h3>
                         </div>
@@ -95,7 +95,7 @@ const Project = ({
                 </div>
                 {align === "right" && (
                     <Link
-                        className="md:w-1/2 md:flex md:items-center relative aspect-video"
+                        className="relative aspect-video md:flex md:w-1/2 md:items-center"
                         href={link}
                         target="_blank"
                         aria-label={title}
@@ -105,13 +105,13 @@ const Project = ({
                             alt={title}
                             fill
                             sizes="(max-width: 768px) 100vw, 50vw"
-                            className="rounded-xl shadow-md object-cover md:object-contain lg:object-cover  hover:scale-105 transition-all duration-300 ease-in-out"
+                            className="rounded-xl object-cover shadow-md transition-all duration-300  ease-in-out hover:scale-105 md:object-contain lg:object-cover"
                         />
                     </Link>
                 )}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Project
+export default Project;

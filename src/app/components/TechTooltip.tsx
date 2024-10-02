@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { Tooltip } from "react-tooltip"
+import { Tooltip } from "react-tooltip";
 
 const TechTooltip = ({
     name,
@@ -8,12 +8,12 @@ const TechTooltip = ({
     content,
     isAccent = false,
 }: {
-    name: string
-    children: React.ReactNode
-    content: string
-    isAccent?: boolean
+    name: string;
+    children: React.ReactNode;
+    content: string;
+    isAccent?: boolean;
 }) => {
-    const tooltipClass = isAccent ? "tooltip tooltip-accent" : "tooltip"
+    const tooltipClass = isAccent ? "tooltip tooltip-accent" : "tooltip";
 
     return (
         <span className="tooltip-container">
@@ -25,7 +25,7 @@ const TechTooltip = ({
                 opacity={1}
             />
         </span>
-    )
-}
+    );
+};
 
-export default TechTooltip
+export default TechTooltip;

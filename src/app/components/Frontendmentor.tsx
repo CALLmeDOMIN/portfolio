@@ -3,10 +3,10 @@ import {
     IconBrandReact,
     IconBrandTailwind,
     IconBrandVercel,
-} from "@tabler/icons-react"
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
+} from "@tabler/icons-react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
 const FrontendMentor = ({
     image,
@@ -15,16 +15,16 @@ const FrontendMentor = ({
     alt,
     whiteText,
 }: {
-    image: string
-    github: string
-    vercel: string
-    alt: string
-    whiteText?: boolean
+    image: string;
+    github: string;
+    vercel: string;
+    alt: string;
+    whiteText?: boolean;
 }) => {
     return (
-        <div className="relative max-w-xs max-h-44">
+        <div className="relative max-h-44 max-w-xs">
             <Image
-                className="max-w-xs max-h-44 transform hover:scale-105 ease-in-out transition-all duration-300 aspect-video rounded-xl"
+                className="aspect-video max-h-44 max-w-xs transform rounded-xl transition-all duration-300 ease-in-out hover:scale-105"
                 src={image}
                 alt={alt}
                 width={320}
@@ -55,20 +55,20 @@ const FrontendMentor = ({
             </Link>
             <IconBrandReact
                 className={
-                    "absolute top-1 right-2" +
+                    "absolute right-2 top-1" +
                     (whiteText ? " text-text" : " text-secondary")
                 }
                 aria-label="react"
             />
             <IconBrandTailwind
                 className={
-                    "absolute top-1 right-9" +
+                    "absolute right-9 top-1" +
                     (whiteText ? " text-text" : " text-secondary")
                 }
                 aria-label="tailwindcss"
             />
         </div>
-    )
-}
+    );
+};
 
-export default FrontendMentor
+export default FrontendMentor;
