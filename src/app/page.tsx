@@ -103,7 +103,7 @@ export default function Home() {
                     ))}
                 </div>
             </section>
-            <div className="h-2 w-full bg-background" />
+            <div className="h-4 w-full bg-background" />
             <section
                 id="experience"
                 className="bg-secondary px-4 py-14 text-white"

@@ -273,14 +273,7 @@ const workExperienceData: WorkExperience[] = [
         company: "SpotOn",
         dateStart: new Date("2024-07-01"),
         dateEnd: new Date("2024-09-30"),
-        bullets: [
-            "Contributed to the design and implementation of a new service using Golang and gRPC, with a focus on building scalable and efficient backend solutions.",
-            "Developed a migration script for MongoDB, ensuring smooth data transitions and contributing to the overall stability of the database infrastructure.",
-            "Worked closely with engineers and other teams to implement service architecture, troubleshoot backend issues, and optimize communication between services.",
-            "Worked with GitHub Actions to automate testing and deployment pipelines, streamlining development workflows and improving team efficiency.",
-            "Assisted with migrating a service to the company's design system using TypeScript, React, and SCSS, ensuring consistency with the updated UI/UX standards.",
-            "Contributed to resolving front-end bugs and improving user experience, aligning front-end components with project goals.",
-        ],
+        desc: "Contributed to the design and implementation of a scalable backend service using <strong>Golang</strong> and <strong>gRPC</strong>, with experience in <strong>MongoDB</strong> migration and CI/CD pipelines via <strong>GitHub Actions</strong>. Also supported front-end efforts, assisting with service migration to the company&apos;s design system and resolving UX-related bugs using <strong>TypeScript</strong>, <strong>React</strong>, and <strong>SCSS</strong>",
         imageUrl: "/spoton.svg",
         link: "https://pl.spoton.com/",
         technologies: [

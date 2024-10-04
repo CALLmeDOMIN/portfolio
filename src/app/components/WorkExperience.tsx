@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import parse from "html-react-parser";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import TechTooltip from "./TechTooltip";
 import { type WorkExperience } from "@/utils/types";
@@ -11,7 +12,7 @@ const WorkExperience = ({
     company,
     dateStart,
     dateEnd,
-    bullets,
+    desc,
     link,
     imageUrl,
     technologies,
@@ -44,11 +45,7 @@ const WorkExperience = ({
                     </h2>
                 </Link>
                 <h3>{company}</h3>
-                <ul className="list-disc space-y-4 pl-4 md:pl-0">
-                    {bullets.map((bullet, i) => (
-                        <li key={i}>{bullet}</li>
-                    ))}
-                </ul>
+                <p>{parse(desc)}</p>
                 <div className="flex flex-col gap-2 md:flex-row md:items-center">
                     <h3 className="font-semibold">Technologies used:</h3>
                     <div className="flex grow items-center gap-2">

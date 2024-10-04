@@ -12,7 +12,7 @@ export type Experience = {
 export type WorkExperience = {
     title: string;
     company: string;
-    bullets: string[];
+    desc: string;
     dateStart: Date;
     dateEnd: Date;
     link: string;
