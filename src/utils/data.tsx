@@ -101,7 +101,7 @@ const projectData: Project[] = [
     {
         title: "UXberries",
         desc: "The project focused on creating a scalable, maintainable codebase that would facilitate future enhancements and integration of new features. The result is a sophisticated platform that not only enhances the association's digital footprint but also serves as a vital resource for student collaboration and scientific discourse",
-        link: "https://uxberries.pl",
+        link: "https://uxb.dsieron.pl/",
         githubLink: "https://github.com/CALLmeDOMIN/uxberries",
         imageUrl: "/uxberries.png",
         isWorkInProgress: false,
