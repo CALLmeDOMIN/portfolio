@@ -123,7 +123,7 @@ export default function Home() {
       </section>
       <section
         id="contact"
-        className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-[1250ms] odd:delay-300 even:delay-700 md:pr-10"
+        className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-1250 odd:delay-300 even:delay-700 md:pr-10"
       >
         <div className="flex">
           <IconAddressBook className="mr-2 text-accent" size={48} />
