@@ -28,12 +28,3 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 }
-
-.tooltip-container .tooltip {
-  background-color: rgba(15, 11, 14);
-  font-weight: 500;
-}
-
-.tooltip-container .tooltip-accent {
-  background-color: #c8b15f;
-}
