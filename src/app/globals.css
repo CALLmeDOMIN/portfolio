@@ -74,9 +74,36 @@
   transform: translateY(-100%);
 }
 
+/* Live indicator on ongoing roles. Slow enough to read as a status light
+   rather than a notification badge. */
+.status-dot {
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--color-accent);
+  animation: status-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-accent) 55%, transparent);
+  }
+  50% {
+    opacity: 0.55;
+    box-shadow: 0 0 0 0.28rem
+      color-mix(in srgb, var(--color-accent) 0%, transparent);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .status-dot {
+    animation: none;
   }
 
   .roll-inner,

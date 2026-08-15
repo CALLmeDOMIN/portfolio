@@ -36,7 +36,11 @@ export default function TimelineEntry({
         {logo && <LogoPlates logos={logo} />}
         <div className="min-w-0">
           {dateStart && (
-            <p className="text-accent font-mono text-xs tracking-wider">
+            <p className="text-accent flex items-center gap-2 font-mono text-xs tracking-wider">
+              {/* A live indicator, the way a panel shows a running unit: it
+                  says at a glance which roles are current, without the reader
+                  parsing dates. */}
+              {dateEnd === null && <span className="status-dot" aria-hidden />}
               {formatDateRange(dateStart, dateEnd)}
             </p>
           )}

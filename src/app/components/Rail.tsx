@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import RollLink from "./RollLink";
+import SectionIndex from "./SectionIndex";
 import Wordmark from "./Wordmark";
-
-const SECTIONS = [
-  { code: "01", label: "Work", href: "#work" },
-  { code: "02", label: "Shipped", href: "#shipped" },
-  { code: "03", label: "Tools", href: "#tools" },
-  { code: "04", label: "Contact", href: "#contact" },
-];
 
 function RailLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -37,18 +31,7 @@ export default function Rail() {
           <p className="text-muted text-sm">AVSystem, Good Lood team</p>
         </div>
 
-        <nav aria-label="Sections" className="lg:mt-2">
-          <ul className="flex flex-wrap gap-x-5 gap-y-2 lg:flex-col lg:gap-2">
-            {SECTIONS.map((s) => (
-              <li key={s.href} className="flex items-baseline gap-3">
-                <span className="text-muted font-mono text-[11px]">
-                  {s.code}
-                </span>
-                <RollLink href={s.href} label={s.label} className="text-sm" />
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <SectionIndex />
 
         <div className="hidden lg:block">
           <RailLabel>Credential</RailLabel>
