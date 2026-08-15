@@ -27,20 +27,6 @@ export default async function Home() {
         <p className="mt-7 max-w-[46ch] text-xl leading-relaxed md:text-2xl">
           I build things that end up touching something physical.
         </p>
-        <p className="text-muted mt-4 max-w-[52ch] leading-relaxed">
-          Software engineer at{" "}
-          <Link
-            href="https://praca.goodlood.com/dev-team"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text hover:text-accent underline underline-offset-4 transition-colors"
-          >
-            AVSystem
-          </Link>
-          , on the team behind Good Lood&apos;s app, point of sale and
-          production tooling. Before that, freezers and delivery vans were
-          somebody else&apos;s problem.
-        </p>
       </div>
 
       <Section id="work" code="01" title="Work">
@@ -90,7 +76,7 @@ export default async function Home() {
 
       <Section id="contact" code="04" title="Contact">
         <p className="text-prose max-w-[52ch] leading-relaxed">
-          Mail or Discord. I will always try to respond.
+          Mail is best. I will always try to respond.
         </p>
         <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-mono text-sm">
           <Link
@@ -100,12 +86,20 @@ export default async function Home() {
             contact@dsieron.pl
           </Link>
           <Link
-            href="https://discord.com/users/320254777160368139"
+            href="https://github.com/CALLmeDOMIN"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"
           >
-            Discord
+            GitHub
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/dominiksieron/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-accent transition-colors"
+          >
+            LinkedIn
           </Link>
         </div>
         <p className="text-muted mt-16 font-mono text-[11px] tracking-[0.18em] uppercase">
