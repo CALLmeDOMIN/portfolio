@@ -14,7 +14,7 @@ export const MARKS = [
 /** PROTOTYPE: the ?mark= override is temporary and goes once a mark is chosen. */
 export default function Wordmark() {
   const params = useSearchParams();
-  const mark = params.get("mark") ?? "name";
+  const mark = params.get("mark") ?? "cmd";
 
   return (
     <Link href="#top" className="inline-block">

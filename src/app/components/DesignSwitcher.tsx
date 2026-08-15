@@ -7,11 +7,14 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { MARKS } from "./Wordmark";
 
+// Cold options dropped: the direction is warm. This is a spectrum from red
+// through orange to amber, plus a desaturated one, so the choice is about
+// temperature and loudness rather than hue family.
 export const ACCENTS = [
   { key: "orange", name: "Safety orange", value: "#ff6b2c" },
+  { key: "ember", name: "Ember (softer)", value: "#ff8552" },
+  { key: "blood", name: "Blood orange", value: "#e8503a" },
   { key: "amber", name: "Signal amber", value: "#f5a524" },
-  { key: "cyan", name: "Ice cyan", value: "#4cc9e0" },
-  { key: "sodium", name: "Sodium lamp", value: "#e4d64b" },
   { key: "rust", name: "Muted rust", value: "#c4573a" },
 ] as const;
 

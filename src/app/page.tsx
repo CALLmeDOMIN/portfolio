@@ -37,7 +37,7 @@ export default async function Home() {
           >
             AVSystem
           </Link>
-          , on the team behind an ice cream chain&apos;s app, point of sale and
+          , on the team behind Good Lood&apos;s app, point of sale and
           production tooling. Before that, freezers and delivery vans were
           somebody else&apos;s problem.
         </p>

@@ -11,7 +11,7 @@ export type TimelineEntryProps = {
   /** What the position was. Never used as the entry's identity. */
   role: string;
   url: string;
-  logo: string | null;
+  logo: readonly string[] | null;
   dateStart: Date | null;
   dateEnd: Date | null;
   tech: readonly string[];
@@ -32,16 +32,26 @@ export default function TimelineEntry({
     <article className="border-line mb-12 border-b pb-12 last:mb-0 last:border-b-0 last:pb-0">
       <div className="flex items-start gap-4">
         {logo && (
-          /* Held in a bordered plate so mixed-provenance logos read as one set
-             of badges. Desaturated at rest, true colour on hover. */
-          <div className="border-line bg-panel relative size-12 shrink-0 border p-2">
-            <Image
-              src={logo}
-              alt={`${organization} logo`}
-              fill
-              sizes="48px"
-              className="object-contain p-2 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
-            />
+          /* Held in bordered plates so logos of mixed provenance read as one
+             set of badges. Desaturated at rest, true colour on hover.
+             Decorative: the organization is named in the adjacent heading,
+             which is also the link, so alt text here would only duplicate it,
+             and with several marks there is no reliable way to name each. */
+          <div className="flex shrink-0 gap-2" aria-hidden>
+            {logo.map((src) => (
+              <div
+                key={src}
+                className="border-line bg-panel relative size-12 border"
+              >
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="48px"
+                  className="object-contain p-2 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
+                />
+              </div>
+            ))}
           </div>
         )}
         <div className="min-w-0">
