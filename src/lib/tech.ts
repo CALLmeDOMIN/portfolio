@@ -1,5 +1,6 @@
 import {
   IconBrandAstro,
+  IconBrandBootstrap,
   IconBrandDjango,
   IconBrandGatsby,
   IconBrandGolang,
@@ -21,6 +22,7 @@ type TechEntry = {
 
 export const TECH = {
   astro: { label: "Astro", Icon: IconBrandAstro },
+  bootstrap: { label: "Bootstrap", Icon: IconBrandBootstrap },
   django: { label: "Django", Icon: IconBrandDjango },
   electron: { label: "Electron" },
   gatsby: { label: "Gatsby", Icon: IconBrandGatsby },
