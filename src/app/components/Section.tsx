@@ -1,27 +1,34 @@
 import { type ReactNode } from "react";
 
+/**
+ * A numbered unit. The code is structural, not decorative: the same numbers
+ * index the sections in the rail, so they are the page's coordinate system.
+ */
 export default function Section({
   id,
+  code,
   title,
-  icon,
   children,
-  className = "",
 }: {
   id: string;
+  code: string;
   title: string;
-  icon: ReactNode;
   children: ReactNode;
-  className?: string;
 }) {
   return (
-    <section id={id} className={`px-4 py-14 ${className}`}>
-      <div className="mx-auto max-w-5xl space-y-12">
-        <div className="flex items-center">
-          <span className="text-accent mr-2">{icon}</span>
-          <h2 className="text-4xl font-bold md:text-5xl">{title}</h2>
-        </div>
-        {children}
+    <section
+      id={id}
+      className="border-line scroll-mt-24 border-t py-14 md:py-20"
+    >
+      <div className="mb-10 flex gap-5 md:gap-6">
+        <span className="text-muted w-10 shrink-0 pt-2 font-mono text-[11px] md:w-12">
+          {code}
+        </span>
+        <h2 className="font-display text-[clamp(2rem,5vw,3.5rem)] leading-[0.95] uppercase">
+          {title}
+        </h2>
       </div>
+      <div className="md:pl-[4.25rem]">{children}</div>
     </section>
   );
 }
