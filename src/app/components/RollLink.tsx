@@ -2,15 +2,17 @@ import Link from "next/link";
 
 /**
  * A link whose characters roll over on hover, like an odometer or a split-flap
- * board. Chosen because that is equipment language rather than decoration: it
- * matches the numbered units and mono labels the rest of the page uses.
+ * board — equipment language, matching the numbered units and mono labels the
+ * rest of the page uses.
  *
- * CSS only — two stacked copies of each character inside a clipped box, the
- * stack translating by half its height. The per-character delay is what makes
- * it read as a roll rather than a single block sliding.
+ * The incoming copy is a CSS ::after using content: attr(data-char), not a
+ * second copy of the text in the DOM. That matters: an earlier version
+ * duplicated the label and hid one copy with utility classes, so whenever the
+ * stylesheet lagged the markup the link rendered as "WorkWWoorrkk". With the
+ * duplicate living in CSS, the worst case is a plain, correct label.
  *
- * Under prefers-reduced-motion the transition is removed in globals.css, so the
- * label simply stays put.
+ * It also means the accessible name is just the characters — no sr-only span
+ * and no aria-hidden needed.
  */
 export default function RollLink({
   href,
@@ -22,26 +24,17 @@ export default function RollLink({
   className?: string;
 }) {
   return (
-    <Link href={href} className={`group inline-flex ${className}`}>
-      <span className="sr-only">{label}</span>
-      <span aria-hidden className="inline-flex">
-        {[...label].map((char, i) => (
-          <span
-            key={`${char}-${i}`}
-            className="roll-char inline-block h-[1.15em] overflow-hidden"
-            style={{ "--i": i } as React.CSSProperties}
-          >
-            <span className="roll-stack flex flex-col">
-              <span className="block h-[1.15em] leading-[1.15]">
-                {char === " " ? " " : char}
-              </span>
-              <span className="text-accent block h-[1.15em] leading-[1.15]">
-                {char === " " ? " " : char}
-              </span>
-            </span>
-          </span>
-        ))}
-      </span>
+    <Link href={href} className={`roll group inline-flex ${className}`}>
+      {[...label].map((char, i) => (
+        <span
+          key={`${char}-${i}`}
+          className="roll-char"
+          data-char={char}
+          style={{ "--i": i } as React.CSSProperties}
+        >
+          <span className="roll-inner">{char}</span>
+        </span>
+      ))}
     </Link>
   );
 }

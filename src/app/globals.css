@@ -38,16 +38,38 @@
 }
 
 /* Odometer roll for nav links. The per-character delay is what sells it as a
-   roll; without the stagger it reads as one block sliding. */
-.roll-stack {
-  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
-  transition-delay: calc(var(--i) * 28ms);
-  will-change: transform;
+   roll; without the stagger it reads as one block sliding.
+
+   The incoming character is a pseudo-element, so if this stylesheet is ever
+   missing the link still renders as a plain, correct label. */
+.roll-char {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 1.15em;
+  line-height: 1.15;
 }
 
-.group:hover .roll-stack,
-.group:focus-visible .roll-stack {
-  transform: translateY(-50%);
+.roll-char::after {
+  content: attr(data-char);
+  position: absolute;
+  inset-inline-start: 0;
+  top: 100%;
+  color: var(--color-accent);
+}
+
+.roll-inner,
+.roll-char::after {
+  display: block;
+  transition: transform 380ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: calc(var(--i) * 28ms);
+}
+
+.roll:hover .roll-inner,
+.roll:focus-visible .roll-inner,
+.roll:hover .roll-char::after,
+.roll:focus-visible .roll-char::after {
+  transform: translateY(-100%);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -55,12 +77,15 @@
     scroll-behavior: auto;
   }
 
-  .roll-stack {
+  .roll-inner,
+  .roll-char::after {
     transition: none;
   }
 
-  .group:hover .roll-stack,
-  .group:focus-visible .roll-stack {
+  .roll:hover .roll-inner,
+  .roll:focus-visible .roll-inner,
+  .roll:hover .roll-char::after,
+  .roll:focus-visible .roll-char::after {
     transform: none;
   }
 }
