@@ -3,21 +3,22 @@ import "./globals.css";
 import Nav from "./components/Nav";
 
 export const metadata: Metadata = {
-    title: "Portfolio Dominik Sieroń",
-    description: "Portfolio Dominik Sieroń - Web Developer",
+  title: "Dominik Sieroń",
+  description:
+    "Software engineer at AVSystem, working on the Good Lood app, point-of-sale and production systems.",
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en" className="scroll-smooth!">
-            <body className="overflow-x-hidden bg-background text-text">
-                <Nav />
-                {children}
-            </body>
-        </html>
-    );
+  return (
+    <html lang="en" className="scroll-smooth!">
+      <body className="bg-background text-text overflow-x-hidden">
+        <Nav />
+        {children}
+      </body>
+    </html>
+  );
 }

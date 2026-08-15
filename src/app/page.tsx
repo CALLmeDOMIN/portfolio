@@ -1,165 +1,161 @@
 import {
   IconAddressBook,
-  IconArrowUpRight,
   IconBrandDiscord,
   IconBrandGithub,
   IconBrandLinkedin,
   IconBriefcase,
-  IconCode,
   IconMail,
   IconSubtask,
+  IconTool,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import Experience from "./components/Experience";
-import { experienceData, projectData, workExperienceData } from "@/utils/data";
-import Project from "./components/Project";
-import WorkExperience from "./components/WorkExperience";
+import Section from "./components/Section";
+import TimelineEntry from "./components/TimelineEntry";
+import ToolCard from "./components/ToolCard";
+import { loadMaintained, loadTools, loadWork } from "@/lib/content/load";
 
-export default function Home() {
+export default async function Home() {
+  const [work, maintained, tools] = await Promise.all([
+    loadWork(),
+    loadMaintained(),
+    loadTools(),
+  ]);
+
   return (
-    <div className="mt-14 font-Poppins">
+    <div className="mt-14">
       <main
         id="home"
         className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-4"
       >
-        <h1 className="text-3xl font-extralight">Hi, my name is</h1>
-        <h1 className="-ml-1 text-7xl font-semibold text-primary">
+        <p className="text-3xl font-extralight">Hi, my name is</p>
+        <h1 className="text-primary -ml-1 text-6xl font-semibold md:text-7xl">
           Dominik Sieroń.
         </h1>
-        <p className="mt-4 max-w-[25ch] pb-2 pl-2 text-xl md:max-w-[50ch]">
-          I am software engineer with a passion for{" "}
-          <span className="text-accent">web development.</span> Currently
-          studying Computer Science in Engineering
-          <br />
-          at <span className="text-accent">AGH University of Cracow</span>.
+        <p className="mt-4 max-w-[55ch] pb-2 pl-2 text-xl">
+          Software engineer at <span className="text-accent">AVSystem</span>, on
+          the team building the app, point-of-sale and production systems an ice
+          cream chain runs on. Engineer&apos;s degree in Informatyka Techniczna
+          from <span className="text-accent">AGH University of Kraków</span>,
+          currently doing the master&apos;s.
         </p>
         <div className="flex items-center gap-2 pl-2">
-          <div className="h-0.5 w-4 bg-secondary"></div>
+          <div className="bg-secondary h-0.5 w-4" />
           <Link
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary"
             href="https://github.com/CALLmeDOMIN"
-            aria-label="Github profile link"
+            aria-label="GitHub profile"
           >
             <IconBrandGithub size={24} />
           </Link>
-          <div className="h-0.5 w-0.5 bg-secondary"></div>
+          <div className="bg-secondary h-0.5 w-0.5" />
           <Link
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary"
             href="https://www.linkedin.com/in/dominiksieron/"
-            aria-label="Linkedin profile link"
+            aria-label="LinkedIn profile"
           >
             <IconBrandLinkedin size={24} />
           </Link>
-          <div className="h-0.5 w-0.5 bg-secondary"></div>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary"
-            href={"/CV.pdf"}
-            aria-label="CV pdf"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-file-cv"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h14v24H0z" fill="none" />
-              <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-              <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-              <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
-              <path d="M13 11l1.5 6l1.5 -6" />
-            </svg>
-          </Link>
-          <div className="h-0.5 w-[40%] bg-secondary"></div>
+          <div className="bg-secondary h-0.5 w-[40%]" />
         </div>
       </main>
-      <section
-        id="workExperience"
-        className="bg-secondary px-4 py-14 text-white"
+
+      <Section
+        id="now"
+        title="Work"
+        icon={<IconBriefcase size={44} />}
+        className="bg-secondary text-white"
       >
-        <div className="mx-auto max-w-7xl space-y-12">
-          <div className="flex">
-            <IconBriefcase className="mr-2 text-accent" size={48} />
-            <h1 className="text-5xl font-bold">Work Experience</h1>
-          </div>
-          {workExperienceData.map((data) => (
-            <WorkExperience key={data.title} {...data} />
+        {work.map((entry) => (
+          <TimelineEntry
+            key={entry.slug}
+            title={entry.title}
+            subtitle={entry.company}
+            url={entry.companyUrl}
+            logo={entry.logo}
+            dateStart={entry.dateStart}
+            dateEnd={entry.dateEnd}
+            tech={entry.tech}
+            body={entry.body}
+          />
+        ))}
+      </Section>
+
+      <div className="bg-background h-4 w-full" />
+
+      <Section
+        id="maintained"
+        title="Shipped & maintained"
+        icon={<IconSubtask size={44} />}
+        className="bg-secondary text-white"
+      >
+        {maintained.map((entry) => (
+          <TimelineEntry
+            key={entry.slug}
+            title={entry.title}
+            subtitle={entry.role}
+            url={entry.url}
+            logo={entry.logo}
+            dateStart={entry.dateStart}
+            dateEnd={entry.dateEnd}
+            tech={entry.tech}
+            body={entry.body}
+          />
+        ))}
+      </Section>
+
+      <Section
+        id="tools"
+        title="Tools I built for myself"
+        icon={<IconTool size={44} />}
+      >
+        <p className="max-w-[65ch] text-lg">
+          Small things I use daily. Each one exists because what was on the
+          market was either subscription-gated or padded with features I had no
+          use for.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {tools.map((tool) => (
+            <ToolCard key={tool.slug} tool={tool} />
           ))}
         </div>
-      </section>
-      <div className="h-4 w-full bg-background" />
-      <section id="experience" className="bg-secondary px-4 py-14 text-white">
-        <div className="mx-auto max-w-7xl space-y-12">
-          <div className="flex">
-            <IconSubtask className="mr-2 text-accent" size={48} />
-            <h1 className="text-5xl font-bold">Relevant Experience</h1>
-          </div>
-          {experienceData.map((experience, key) => (
-            <Experience key={key} {...experience} />
-          ))}
-        </div>
-      </section>
-      <section id="projects" className="px-4 py-14">
-        <div className="mx-auto max-w-7xl space-y-10">
-          <div className="flex justify-end">
-            <h1 className="text-5xl font-bold">Projects</h1>
-            <IconCode className="ml-2 text-accent" size={48} />
-          </div>
-          {projectData.map((project, key) => (
-            <Project key={key} {...project} />
-          ))}
-        </div>
-      </section>
-      <section
+      </Section>
+
+      <Section
         id="contact"
-        className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-1250 odd:delay-300 even:delay-700 md:pr-10"
+        title="Contact"
+        icon={<IconAddressBook size={44} />}
       >
-        <div className="flex">
-          <IconAddressBook className="mr-2 text-accent" size={48} />
-          <h1 className="mb-4 text-5xl font-bold">Contact me</h1>
-        </div>
-        <div>
-          <p className="mb-4 text-center font-light md:text-xl">
-            You can write to me through{" "}
-            <span className="text-accent">mail/discord</span>. I will always try
-            to respond.
+        <div className="space-y-4">
+          <p className="text-lg">
+            Mail or Discord. I will always try to respond.
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex gap-4">
             <Link
-              aria-label="mail"
+              aria-label="Email"
               href="mailto:contact@dsieron.pl"
-              className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
+              className="bg-primary text-background flex rounded-md p-2 px-4"
             >
               <IconMail />
             </Link>
             <Link
-              aria-label="discord"
-              href={"https://discord.com/users/320254777160368139"}
+              aria-label="Discord"
+              href="https://discord.com/users/320254777160368139"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
+              className="bg-primary text-background flex rounded-md p-2 px-4"
             >
               <IconBrandDiscord />
             </Link>
           </div>
         </div>
-      </section>
-      <footer className="flex items-center bg-secondary p-4 font-semibold shadow-md">
-        <h1>
-          &copy;
-          {" " + new Date().getFullYear()} Dominik Sieroń
-        </h1>
+      </Section>
+
+      <footer className="bg-secondary flex items-center p-4 font-semibold shadow-md">
+        <p>&copy; {new Date().getFullYear()} Dominik Sieroń</p>
       </footer>
     </div>
   );
