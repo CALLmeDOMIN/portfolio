@@ -50,6 +50,7 @@ export default async function Home() {
             organization={entry.company}
             role={entry.title}
             url={entry.companyUrl}
+            logo={entry.logo}
             dateStart={entry.dateStart}
             dateEnd={entry.dateEnd}
             tech={entry.tech}
@@ -65,6 +66,7 @@ export default async function Home() {
             organization={entry.title}
             role={entry.role}
             url={entry.url}
+            logo={entry.logo}
             dateStart={entry.dateStart}
             dateEnd={entry.dateEnd}
             tech={entry.tech}

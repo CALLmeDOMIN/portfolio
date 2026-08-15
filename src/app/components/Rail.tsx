@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import { IconArrowUpRight } from "@tabler/icons-react";
+import Wordmark from "./Wordmark";
 
 const SECTIONS = [
   { code: "01", label: "Work", href: "#work" },
@@ -27,13 +29,9 @@ export default function Rail() {
       {/* overflow-y-auto because the rail's content is taller than a short
           laptop viewport, which was clipping the contact block. */}
       <div className="flex flex-col gap-8 px-6 py-8 lg:h-full lg:gap-7 lg:overflow-y-auto lg:px-7 lg:py-10">
-        <Link
-          href="#top"
-          className="font-display text-2xl tracking-wide uppercase"
-        >
-          Dominik
-          <span className="text-accent">.</span>
-        </Link>
+        <Suspense fallback={null}>
+          <Wordmark />
+        </Suspense>
 
         <div className="hidden lg:block">
           <RailLabel>Operator</RailLabel>

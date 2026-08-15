@@ -1,6 +1,8 @@
 import { type Metadata } from "next";
 import { Anton, IBM_Plex_Mono, Public_Sans } from "next/font/google";
+import { Suspense } from "react";
 import "./globals.css";
+import DesignSwitcher from "./components/DesignSwitcher";
 import Rail from "./components/Rail";
 
 const anton = Anton({
@@ -41,6 +43,9 @@ export default function RootLayout({
           <Rail />
           {children}
         </div>
+        <Suspense fallback={null}>
+          <DesignSwitcher />
+        </Suspense>
       </body>
     </html>
   );
