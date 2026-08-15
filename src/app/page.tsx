@@ -72,8 +72,8 @@ export default async function Home() {
         {work.map((entry) => (
           <TimelineEntry
             key={entry.slug}
-            title={entry.title}
-            subtitle={entry.company}
+            organization={entry.company}
+            role={entry.title}
             url={entry.companyUrl}
             logo={entry.logo}
             dateStart={entry.dateStart}
@@ -95,8 +95,8 @@ export default async function Home() {
         {maintained.map((entry) => (
           <TimelineEntry
             key={entry.slug}
-            title={entry.title}
-            subtitle={entry.role}
+            organization={entry.title}
+            role={entry.role}
             url={entry.url}
             logo={entry.logo}
             dateStart={entry.dateStart}

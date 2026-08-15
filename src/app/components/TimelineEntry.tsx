@@ -6,8 +6,10 @@ import { Prose } from "./mdx";
 import TechList from "./TechList";
 
 export type TimelineEntryProps = {
-  title: string;
-  subtitle: string;
+  /** The organisation. Heads the entry, names the logo, and stands in for a missing one. */
+  organization: string;
+  /** What the position was. Never used as the entry's identity. */
+  role: string;
   url: string;
   logo: string | null;
   dateStart: Date | null;
@@ -17,8 +19,8 @@ export type TimelineEntryProps = {
 };
 
 export default function TimelineEntry({
-  title,
-  subtitle,
+  organization,
+  role,
   url,
   logo,
   dateStart,
@@ -33,14 +35,14 @@ export default function TimelineEntry({
           {logo ? (
             <Image
               src={logo}
-              alt={`${subtitle} logo`}
+              alt={`${organization} logo`}
               fill
-              sizes="160px"
+              sizes="(min-width: 768px) 160px, 100vw"
               className="object-contain"
             />
           ) : (
-            <span className="text-primary text-center text-lg font-semibold">
-              {subtitle}
+            <span className="text-center text-lg font-semibold opacity-80">
+              {organization}
             </span>
           )}
         </div>
@@ -54,11 +56,11 @@ export default function TimelineEntry({
         <div>
           <Link href={url} target="_blank" rel="noopener noreferrer">
             <h3 className="text-2xl font-semibold md:text-3xl">
-              {title}
+              {organization}
               <IconArrowUpRight size={28} className="-mt-1 inline-block" />
             </h3>
           </Link>
-          <p className="text-primary">{subtitle}</p>
+          <p className="opacity-80">{role}</p>
         </div>
         <div>
           <Prose source={body} />

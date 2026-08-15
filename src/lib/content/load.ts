@@ -11,7 +11,16 @@ function parseEntry<S extends z.ZodType<object>>(
   raw: string,
   sourceId: string,
 ): z.infer<S> & { body: string } {
-  const { data, content } = matter(raw);
+  let data: unknown;
+  let content: string;
+  try {
+    ({ data, content } = matter(raw));
+  } catch (cause) {
+    // A YAML syntax error knows its line but not its file, and eight .mdx
+    // files produce eight identical-looking failures without this.
+    throw new Error(`Malformed frontmatter in ${sourceId}`, { cause });
+  }
+
   const result = schema.safeParse(data);
 
   if (!result.success) {
