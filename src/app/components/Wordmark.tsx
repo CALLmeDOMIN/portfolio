@@ -10,7 +10,7 @@ export default function Wordmark() {
     <Link href="#top" className="inline-block font-mono text-xl lowercase">
       cmd
       <span
-        className="bg-accent ml-0.5 inline-block h-4 w-2 translate-y-0.5"
+        className="caret bg-accent ml-0.5 inline-block h-4 w-2 translate-y-0.5"
         aria-hidden
       />
     </Link>

@@ -74,6 +74,23 @@
   transform: translateY(-100%);
 }
 
+/* Block caret on the wordmark. steps(1) rather than a fade: a terminal cursor
+   snaps between states, and easing it would read as a glow instead. */
+.caret {
+  animation: caret-blink 1.1s steps(1, end) infinite;
+}
+
+@keyframes caret-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
 /* Live indicator on ongoing roles. Slow enough to read as a status light
    rather than a notification badge. */
 .status-dot {
@@ -102,7 +119,8 @@
     scroll-behavior: auto;
   }
 
-  .status-dot {
+  .status-dot,
+  .caret {
     animation: none;
   }
 

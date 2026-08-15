@@ -2,6 +2,7 @@ import { type Metadata } from "next";
 import { Anton, IBM_Plex_Mono, Public_Sans } from "next/font/google";
 import "./globals.css";
 import Rail from "./components/Rail";
+import SmoothScroll from "./components/SmoothScroll";
 
 const anton = Anton({
   subsets: ["latin"],
@@ -34,13 +35,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${publicSans.variable} ${plexMono.variable} scroll-smooth`}
+      /* No scroll-smooth: Lenis drives scrolling, and CSS smooth behaviour
+         fights it. globals.css restores native behaviour under reduced
+         motion, where Lenis never starts. */
+      className={`${anton.variable} ${publicSans.variable} ${plexMono.variable}`}
     >
       <body className="bg-background text-text overflow-x-hidden font-sans">
         <div className="mx-auto flex max-w-[1400px] flex-col lg:flex-row">
           <Rail />
           {children}
         </div>
+        <SmoothScroll />
       </body>
     </html>
   );
