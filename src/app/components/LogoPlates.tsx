@@ -1,12 +1,15 @@
 import Image from "next/image";
 
 /**
- * Logo marks as bordered plates, joined by × when an entry spans more than one
+ * Logo marks as light plates, joined by × when an entry spans more than one
  * organization ("AVSystem × Good Lood").
  *
- * Rendered pure white at rest and true colour on hover. That is not only for
- * cohesion across logos of mixed provenance — SpotOn's official symbol is
- * #090D12, which would be invisible against this background untreated.
+ * The plates are light on purpose. These marks were drawn for white: SKN's is
+ * partly black and SpotOn's symbol is #090D12, so both disappear on this
+ * background, and the UXberries mark is a JPEG carrying its own white. Forcing
+ * them all white at rest fixed visibility but threw away SpotOn's blue and
+ * Good Lood's palette. A light plate keeps every brand's real colour and reads
+ * as an asset tag, which suits the rest of the page.
  *
  * Decorative throughout: the organization is named in the adjacent heading,
  * which is also the link, so alt text would only duplicate it.
@@ -17,13 +20,13 @@ export default function LogoPlates({ logos }: { logos: readonly string[] }) {
       {logos.map((src, i) => (
         <div key={src} className="flex items-center gap-2">
           {i > 0 && <span className="text-muted font-mono text-xs">×</span>}
-          <div className="border-line bg-panel relative size-14 border md:size-[4.5rem]">
+          <div className="border-line relative size-14 overflow-hidden border bg-white md:size-[4.5rem]">
             <Image
               src={src}
               alt=""
               fill
               sizes="72px"
-              className="object-contain p-2.5 opacity-70 brightness-0 invert transition duration-300 hover:opacity-100 hover:brightness-100 hover:invert-0"
+              className="object-contain p-2"
             />
           </div>
         </div>
