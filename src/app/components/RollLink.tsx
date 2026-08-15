@@ -17,14 +17,22 @@ import Link from "next/link";
 export default function RollLink({
   href,
   label,
+  external = false,
   className = "",
 }: {
   href: string;
   label: string;
+  external?: boolean;
   className?: string;
 }) {
   return (
-    <Link href={href} className={`roll group inline-flex ${className}`}>
+    <Link
+      href={href}
+      {...(external
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : undefined)}
+      className={`roll inline-flex ${className}`}
+    >
       {[...label].map((char, i) => (
         <span
           key={`${char}-${i}`}

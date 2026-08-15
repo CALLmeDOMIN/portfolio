@@ -1,4 +1,4 @@
-import Link from "next/link";
+import RollLink from "./components/RollLink";
 import Section from "./components/Section";
 import TimelineEntry from "./components/TimelineEntry";
 import ToolCard from "./components/ToolCard";
@@ -81,28 +81,20 @@ export default async function Home() {
           Mail is best. I will always try to respond.
         </p>
         <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-mono text-sm">
-          <Link
+          <RollLink
             href="mailto:contact@dsieron.pl"
-            className="text-accent hover:text-text transition-colors"
-          >
-            contact@dsieron.pl
-          </Link>
-          <Link
+            label="contact@dsieron.pl"
+          />
+          <RollLink
             href="https://github.com/CALLmeDOMIN"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            GitHub
-          </Link>
-          <Link
+            label="GitHub"
+            external
+          />
+          <RollLink
             href="https://www.linkedin.com/in/dominiksieron/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-          >
-            LinkedIn
-          </Link>
+            label="LinkedIn"
+            external
+          />
         </div>
         <p className="text-muted mt-16 font-mono text-[11px] tracking-[0.18em] uppercase">
           &copy; {new Date().getFullYear()} Dominik Sieroń

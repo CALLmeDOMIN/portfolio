@@ -67,42 +67,28 @@ export default function Rail() {
           </div>
           <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-[13px] lg:flex-col lg:gap-1">
             <li>
-              <Link
+              <RollLink
                 href="https://github.com/CALLmeDOMIN"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-              >
-                GitHub
-              </Link>
+                label="GitHub"
+                external
+              />
             </li>
             <li>
-              <Link
+              <RollLink
                 href="https://www.linkedin.com/in/dominiksieron/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent transition-colors"
-              >
-                LinkedIn
-              </Link>
+                label="LinkedIn"
+                external
+              />
+            </li>
+            <li className="inline-flex items-center">
+              <RollLink href="/CV.pdf" label="CV" external />
+              <IconArrowUpRight size={14} className="-mt-0.5" aria-hidden />
             </li>
             <li>
-              <Link
-                href="/CV.pdf"
-                target="_blank"
-                className="hover:text-accent inline-flex items-center transition-colors"
-              >
-                CV
-                <IconArrowUpRight size={14} className="-mt-0.5" aria-hidden />
-              </Link>
-            </li>
-            <li>
-              <Link
+              <RollLink
                 href="mailto:contact@dsieron.pl"
-                className="text-accent break-all"
-              >
-                contact@dsieron.pl
-              </Link>
+                label="contact@dsieron.pl"
+              />
             </li>
           </ul>
         </div>
