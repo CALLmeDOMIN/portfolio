@@ -17,9 +17,11 @@ export default async function Home() {
         <p className="text-accent font-mono text-[11px] tracking-[0.18em] uppercase">
           Kraków, Poland
         </p>
-        {/* leading-[0.95], not tighter: the acute on Ń collides with the line
-            above at 0.86, and the name is the one thing that must not break. */}
-        <h1 className="font-display mt-5 text-[clamp(3.5rem,11vw,9.5rem)] leading-[0.95] uppercase">
+        {/* leading-[1.1], measured rather than guessed: in Anton the acute on Ń
+            rises 34px above cap height at 141px type, and a 0.95 line box
+            leaves only 13px between lines, so the accent lands inside DOMINIK
+            above it. 1.1 only just touches, so 1.15 for an actual gap. */}
+        <h1 className="font-display mt-5 text-[clamp(3.5rem,11vw,9.5rem)] leading-[1.15] uppercase">
           Dominik
           <br />
           Sieroń

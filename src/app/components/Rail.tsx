@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
+import RollLink from "./RollLink";
 import Wordmark from "./Wordmark";
 
 const SECTIONS = [
@@ -39,16 +40,11 @@ export default function Rail() {
         <nav aria-label="Sections" className="lg:mt-2">
           <ul className="flex flex-wrap gap-x-5 gap-y-2 lg:flex-col lg:gap-2">
             {SECTIONS.map((s) => (
-              <li key={s.href}>
-                <Link
-                  href={s.href}
-                  className="hover:text-accent group flex items-baseline gap-3 text-sm transition-colors"
-                >
-                  <span className="text-muted group-hover:text-accent font-mono text-[11px]">
-                    {s.code}
-                  </span>
-                  {s.label}
-                </Link>
+              <li key={s.href} className="flex items-baseline gap-3">
+                <span className="text-muted font-mono text-[11px]">
+                  {s.code}
+                </span>
+                <RollLink href={s.href} label={s.label} className="text-sm" />
               </li>
             ))}
           </ul>
