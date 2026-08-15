@@ -6,7 +6,7 @@ import { Prose } from "./mdx";
 import TechList from "./TechList";
 
 export type TimelineEntryProps = {
-  /** The organisation. Heads the entry, names the logo, and stands in for a missing one. */
+  /** The organization. Heads the entry, names the logo, and stands in for a missing one. */
   organization: string;
   /** What the position was. Never used as the entry's identity. */
   role: string;
