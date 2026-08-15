@@ -1,12 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { formatDateRange } from "@/lib/format";
+import LogoPlates from "./LogoPlates";
 import { Prose } from "./mdx";
 import TechList from "./TechList";
 
 export type TimelineEntryProps = {
-  /** The organization. Heads the entry and names the logo for screen readers. */
+  /** The organization. Heads the entry and is the entry's identity. */
   organization: string;
   /** What the position was. Never used as the entry's identity. */
   role: string;
@@ -30,30 +30,10 @@ export default function TimelineEntry({
 }: TimelineEntryProps) {
   return (
     <article className="border-line mb-12 border-b pb-12 last:mb-0 last:border-b-0 last:pb-0">
-      <div className="flex items-start gap-4">
-        {logo && (
-          /* Held in bordered plates so logos of mixed provenance read as one
-             set of badges. Desaturated at rest, true colour on hover.
-             Decorative: the organization is named in the adjacent heading,
-             which is also the link, so alt text here would only duplicate it,
-             and with several marks there is no reliable way to name each. */
-          <div className="flex shrink-0 gap-2" aria-hidden>
-            {logo.map((src) => (
-              <div
-                key={src}
-                className="border-line bg-panel relative size-12 border"
-              >
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  sizes="48px"
-                  className="object-contain p-2 opacity-70 grayscale transition duration-300 hover:opacity-100 hover:grayscale-0"
-                />
-              </div>
-            ))}
-          </div>
-        )}
+      {/* Plates stack above the text on narrow screens: side by side, a pair of
+          72px plates plus the × leaves too little room for the heading. */}
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-5">
+        {logo && <LogoPlates logos={logo} />}
         <div className="min-w-0">
           {dateStart && (
             <p className="text-accent font-mono text-xs tracking-wider">
