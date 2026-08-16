@@ -38,3 +38,9 @@ next-env.d.ts
 # agent planning artifacts
 docs/superpowers/
 .superpowers/
+
+# pnpm 10+ writes this to record local build-script approvals. It must not be
+# committed: Vercel builds with pnpm 9, which treats any pnpm-workspace.yaml as
+# declaring a monorepo and fails with "packages field missing or empty".
+# pnpm 9 runs build scripts by default, so nothing is lost on deploy.
+pnpm-workspace.yaml
