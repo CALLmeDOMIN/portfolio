@@ -1,166 +1,114 @@
-import {
-  IconAddressBook,
-  IconArrowUpRight,
-  IconBrandDiscord,
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconBriefcase,
-  IconCode,
-  IconMail,
-  IconSubtask,
-} from "@tabler/icons-react";
-import Link from "next/link";
-import Experience from "./components/Experience";
-import { experienceData, projectData, workExperienceData } from "@/utils/data";
-import Project from "./components/Project";
-import WorkExperience from "./components/WorkExperience";
+import Rail from "./components/Rail";
+import RollLink from "./components/RollLink";
+import Section from "./components/Section";
+import SmoothScroll from "./components/SmoothScroll";
+import TimelineEntry from "./components/TimelineEntry";
+import ToolCard from "./components/ToolCard";
+import { loadMaintained, loadTools, loadWork } from "@/lib/content/load";
 
-export default function Home() {
+export default async function Home() {
+  const [work, maintained, tools] = await Promise.all([
+    loadWork(),
+    loadMaintained(),
+    loadTools(),
+  ]);
+
   return (
-    <div className="mt-14 font-Poppins">
-      <main
-        id="home"
-        className="mx-auto flex min-h-screen max-w-5xl flex-col justify-center px-4"
-      >
-        <h1 className="text-3xl font-extralight">Hi, my name is</h1>
-        <h1 className="-ml-1 text-7xl font-semibold text-primary">
-          Dominik Sieroń.
-        </h1>
-        <p className="mt-4 max-w-[25ch] pb-2 pl-2 text-xl md:max-w-[50ch]">
-          I am software engineer with a passion for{" "}
-          <span className="text-accent">web development.</span> Currently
-          studying Computer Science in Engineering
-          <br />
-          at <span className="text-accent">AGH University of Cracow</span>.
-        </p>
-        <div className="flex items-center gap-2 pl-2">
-          <div className="h-0.5 w-4 bg-secondary"></div>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary"
-            href="https://github.com/CALLmeDOMIN"
-            aria-label="Github profile link"
-          >
-            <IconBrandGithub size={24} />
-          </Link>
-          <div className="h-0.5 w-0.5 bg-secondary"></div>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary"
-            href="https://www.linkedin.com/in/dominiksieron/"
-            aria-label="Linkedin profile link"
-          >
-            <IconBrandLinkedin size={24} />
-          </Link>
-          <div className="h-0.5 w-0.5 bg-secondary"></div>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-primary"
-            href={"/CV.pdf"}
-            aria-label="CV pdf"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-file-cv"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h14v24H0z" fill="none" />
-              <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-              <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-              <path d="M11 12.5a1.5 1.5 0 0 0 -3 0v3a1.5 1.5 0 0 0 3 0" />
-              <path d="M13 11l1.5 6l1.5 -6" />
-            </svg>
-          </Link>
-          <div className="h-0.5 w-[40%] bg-secondary"></div>
-        </div>
-      </main>
-      <section
-        id="workExperience"
-        className="bg-secondary px-4 py-14 text-white"
-      >
-        <div className="mx-auto max-w-7xl space-y-12">
-          <div className="flex">
-            <IconBriefcase className="mr-2 text-accent" size={48} />
-            <h1 className="text-5xl font-bold">Work Experience</h1>
+    <div className="mx-auto flex max-w-[1400px] flex-col lg:flex-row">
+      <Rail />
+      <SmoothScroll />
+      <div className="flex min-w-0 flex-1 flex-col">
+        <main id="top" className="px-6 pb-20 md:px-10">
+          <div className="flex min-h-[78vh] flex-col justify-center py-20 md:min-h-[86vh]">
+            <p className="text-accent font-mono text-[11px] tracking-[0.18em] uppercase">
+              Kraków, Poland
+            </p>
+            {/* leading-[1.1], measured rather than guessed: in Anton the acute on Ń
+            rises 34px above cap height at 141px type, and a 0.95 line box
+            leaves only 13px between lines, so the accent lands inside DOMINIK
+            above it. 1.1 only just touches, so 1.15 for an actual gap. */}
+            <h1 className="font-display mt-5 text-[clamp(3.5rem,11vw,9.5rem)] leading-[1.15] uppercase">
+              Dominik
+              <br />
+              Sieroń
+            </h1>
+            <p className="mt-7 max-w-[46ch] text-xl leading-relaxed md:text-2xl">
+              I build things that end up touching something physical.
+            </p>
           </div>
-          {workExperienceData.map((data) => (
-            <WorkExperience key={data.title} {...data} />
-          ))}
-        </div>
-      </section>
-      <div className="h-4 w-full bg-background" />
-      <section id="experience" className="bg-secondary px-4 py-14 text-white">
-        <div className="mx-auto max-w-7xl space-y-12">
-          <div className="flex">
-            <IconSubtask className="mr-2 text-accent" size={48} />
-            <h1 className="text-5xl font-bold">Relevant Experience</h1>
-          </div>
-          {experienceData.map((experience, key) => (
-            <Experience key={key} {...experience} />
-          ))}
-        </div>
-      </section>
-      <section id="projects" className="px-4 py-14">
-        <div className="mx-auto max-w-7xl space-y-10">
-          <div className="flex justify-end">
-            <h1 className="text-5xl font-bold">Projects</h1>
-            <IconCode className="ml-2 text-accent" size={48} />
-          </div>
-          {projectData.map((project, key) => (
-            <Project key={key} {...project} />
-          ))}
-        </div>
-      </section>
-      <section
-        id="contact"
-        className="mx-auto flex w-full max-w-5xl flex-col space-y-4 px-4 py-28 transition-all  duration-1250 odd:delay-300 even:delay-700 md:pr-10"
-      >
-        <div className="flex">
-          <IconAddressBook className="mr-2 text-accent" size={48} />
-          <h1 className="mb-4 text-5xl font-bold">Contact me</h1>
-        </div>
-        <div>
-          <p className="mb-4 text-center font-light md:text-xl">
-            You can write to me through{" "}
-            <span className="text-accent">mail/discord</span>. I will always try
-            to respond.
-          </p>
-          <div className="flex justify-center gap-4">
-            <Link
-              aria-label="mail"
-              href="mailto:contact@dsieron.pl"
-              className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
-            >
-              <IconMail />
-            </Link>
-            <Link
-              aria-label="discord"
-              href={"https://discord.com/users/320254777160368139"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-4 flex justify-center rounded-md bg-primary p-2 px-4 text-white"
-            >
-              <IconBrandDiscord />
-            </Link>
-          </div>
-        </div>
-      </section>
-      <footer className="flex items-center bg-secondary p-4 font-semibold shadow-md">
-        <h1>
-          &copy;
-          {" " + new Date().getFullYear()} Dominik Sieroń
-        </h1>
-      </footer>
+
+          <Section id="work" code="01" title="Work">
+            {work.map((entry) => (
+              <TimelineEntry
+                key={entry.slug}
+                organization={entry.company}
+                role={entry.title}
+                url={entry.companyUrl}
+                logo={entry.logo}
+                dateStart={entry.dateStart}
+                dateEnd={entry.dateEnd}
+                tech={entry.tech}
+                body={entry.body}
+              />
+            ))}
+          </Section>
+
+          <Section id="shipped" code="02" title="Shipped">
+            {maintained.map((entry) => (
+              <TimelineEntry
+                key={entry.slug}
+                organization={entry.title}
+                role={entry.role}
+                url={entry.url}
+                logo={entry.logo}
+                dateStart={entry.dateStart}
+                dateEnd={entry.dateEnd}
+                tech={entry.tech}
+                body={entry.body}
+              />
+            ))}
+          </Section>
+
+          <Section id="tools" code="03" title="Built for myself">
+            <p className="text-prose mb-8 max-w-[62ch] leading-relaxed">
+              Small things I use daily. Each one exists because what was on the
+              market was either subscription-gated or padded with features I had
+              no use for.
+            </p>
+            <div className="border-line bg-line grid gap-px border">
+              {tools.map((tool) => (
+                <ToolCard key={tool.slug} tool={tool} />
+              ))}
+            </div>
+          </Section>
+
+          <Section id="contact" code="04" title="Contact">
+            <p className="text-prose max-w-[52ch] leading-relaxed">
+              Mail is best. I will always try to respond.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 font-mono text-sm">
+              <RollLink
+                href="mailto:contact@dsieron.pl"
+                label="contact@dsieron.pl"
+              />
+              <RollLink
+                href="https://github.com/CALLmeDOMIN"
+                label="GitHub"
+                external
+              />
+              <RollLink
+                href="https://www.linkedin.com/in/dominiksieron/"
+                label="LinkedIn"
+                external
+              />
+            </div>
+          </Section>
+        </main>
+
+        <footer className="border-line text-muted border-t px-6 py-8 font-mono text-[11px] tracking-[0.18em] uppercase md:px-10">
+          &copy; {new Date().getFullYear()} Dominik Sieroń
+        </footer>
+      </div>
     </div>
   );
 }
