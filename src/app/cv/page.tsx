@@ -102,6 +102,18 @@ export default async function CV() {
             ]}
           />
         </Block>
+
+        {/* One line, not a paragraph, and no lesson attached to any of it. The
+            claim that hobbies taught you teamwork is the pattern reviewers
+            discount. The second sentence is the only editorial, and it is
+            checkable two sections up. */}
+        <Block title="Interests">
+          <p className="text-neutral-800">
+            JDM cars, piano and trumpet, the gym, video games, films and series,
+            travel, and photography lately. Several of them end up as something
+            I build.
+          </p>
+        </Block>
       </article>
     </div>
   );
