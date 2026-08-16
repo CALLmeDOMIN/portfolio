@@ -1,7 +1,19 @@
 ---
 title: cinelog
 replaces: Trakt
-tech: [typescript, react]
+tech:
+  [
+    typescript,
+    turborepo,
+    nextjs,
+    react-native,
+    expo,
+    trpc,
+    hono,
+    drizzle,
+    postgresql,
+    tailwindcss,
+  ]
 order: 1
 ---
 
@@ -13,7 +25,8 @@ titles sits behind the paywall, and catching up on a series means ticking
 episodes one at a time, with no way to mark a whole season. The social half
 of it was never why I was there.
 
-So the social half is gone. What is left is closer to a spreadsheet than an
-app, which is what this always was: an API underneath, a web version and a
-mobile one, and season-level ticking so catching up is one action instead of
-one per episode.
+So the social half is gone, and season-level ticking means catching up is one
+action instead of one per episode. The rest is a monorepo: a Hono and tRPC
+API over Postgres, a Next.js web app and an Expo mobile app, sharing the same
+typed contract so a change to the schema fails at compile time on both ends
+rather than at runtime on one.

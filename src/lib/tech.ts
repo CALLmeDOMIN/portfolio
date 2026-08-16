@@ -24,9 +24,12 @@ export const TECH = {
   astro: { label: "Astro", Icon: IconBrandAstro },
   bootstrap: { label: "Bootstrap", Icon: IconBrandBootstrap },
   django: { label: "Django", Icon: IconBrandDjango },
+  drizzle: { label: "Drizzle" },
   electron: { label: "Electron" },
+  expo: { label: "Expo" },
   gatsby: { label: "Gatsby", Icon: IconBrandGatsby },
   golang: { label: "Go", Icon: IconBrandGolang },
+  hono: { label: "Hono" },
   java: { label: "Java" },
   javascript: { label: "JavaScript", Icon: IconBrandJavascript },
   mongodb: { label: "MongoDB", Icon: IconBrandMongodb },
@@ -38,7 +41,10 @@ export const TECH = {
   sass: { label: "Sass", Icon: IconBrandSass },
   spring: { label: "Spring" },
   tailwindcss: { label: "Tailwind CSS", Icon: IconBrandTailwind },
+  trpc: { label: "tRPC" },
+  turborepo: { label: "Turborepo" },
   typescript: { label: "TypeScript", Icon: IconBrandTypescript },
+  zustand: { label: "Zustand" },
 } as const satisfies Record<string, TechEntry>;
 
 export type TechKey = keyof typeof TECH;
