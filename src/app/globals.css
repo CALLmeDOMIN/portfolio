@@ -74,6 +74,24 @@
   transform: translateY(-100%);
 }
 
+/* The CV route is a document, not a page of the site: A4, no browser headers,
+   and colours that survive being printed. */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  .cv-page {
+    background: #fff;
+  }
+
+  .cv-sheet {
+    max-width: none;
+    box-shadow: none;
+  }
+}
+
 /* Block caret on the wordmark. steps(1) rather than a fade: a terminal cursor
    snaps between states, and easing it would read as a glow instead. */
 .caret {

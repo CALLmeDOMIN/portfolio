@@ -6,6 +6,13 @@ const logoPath = z.string().startsWith("/");
 
 const common = {
   title: z.string().min(1),
+  /**
+   * Condensed lines for the CV. The site body is prose and runs too long for a
+   * one-page document, so an entry carries both: the prose it reads as here,
+   * and the bullets it reduces to there. Optional, and the CV falls back to the
+   * body's opening paragraph when absent.
+   */
+  highlights: z.array(z.string().min(1)).optional(),
   tech: z
     .array(techKey)
     .min(1)

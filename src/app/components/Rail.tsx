@@ -64,7 +64,7 @@ export default function Rail() {
               />
             </li>
             <li className="inline-flex items-center">
-              <RollLink href="/CV.pdf" label="CV" external />
+              <RollLink href="/cv" label="CV" />
               <IconArrowUpRight size={14} className="-mt-0.5" aria-hidden />
             </li>
             <li>
