@@ -33,6 +33,17 @@ export default async function CV() {
   return (
     <div className="cv-page min-h-screen bg-neutral-200 py-8 print:bg-white print:py-0">
       <article className="cv-sheet mx-auto max-w-[210mm] bg-white px-[14mm] py-[13mm] text-[10.5pt] leading-snug text-neutral-900 shadow-lg print:shadow-none">
+        {/* Links the generated file rather than calling window.print(), so a
+            visitor gets a real download in one click instead of a print
+            dialog they have to know to save from. */}
+        <a
+          href="/CV.pdf"
+          download="Dominik Sieron CV.pdf"
+          className="mb-5 inline-block border border-neutral-400 px-3 py-1.5 text-[9pt] tracking-[0.14em] uppercase transition-colors hover:bg-neutral-900 hover:text-white print:hidden"
+        >
+          Download PDF
+        </a>
+
         <header className="mb-5 border-b border-neutral-300 pb-4">
           <h1 className="text-[24pt] leading-none font-bold tracking-tight">
             Dominik Sieroń
